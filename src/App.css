@@ -1,38 +1,591 @@
-.App {
-  text-align: center;
+
+
+  /**********************************************************************/
+
+  /****                                                              ****/
+  /**** <<===== === ! | THE APP STYLING STARTS HERE | ! === =====>>  ****/
+  /**** <<=====                                                      ****/
+  /****               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^                   ****/
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+             /**** <====\ == ! | COMPONENTS STYLING STARTS HERE| ! == /====>  ****/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+  .app-content-holder {
+    width: 110%;
+    height: 100vh;
   }
-}
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+   /* <--- --- | NAV-BAR COMPONENT STYLING | --- ---> */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .app-global-navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 21px;
+    border-bottom: 1px solid black;
   }
-  to {
-    transform: rotate(360deg);
+
+  .global-navbar-items-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
   }
-}
+
+  .global-navbar-emptyspace {
+    width: 43%;
+  }
+
+  .global-navbar-items {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .global-navba-link-item {
+    font-size: 18pt;
+    text-decoration: none;
+    color: black;
+  }
+
+
+     /* <--- --- | REMINDERS-BAR COMPONENT STYLING | --- ---> */
+
+  .reminders-bar {
+    height: 100%;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px 0 15px ;
+
+    background-color: #048A81;
+  }
+
+  .reminder-bar-title-holder {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  .reminder-bar-title {
+    font-size: 30pt;
+    color: #ffff;
+  }
+  
+  .reminder-bar-add-reminder {
+    font-size: 25pt;
+    font-weight: bold;
+  }
+
+  .reminder-bar-reminder-items-container {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+   /* <--- --- | REMINDER NOTIFICATION COMPONENT STYLING | --- ---> */
+
+  .reminder-notification-outer {
+    height: 20%;
+    width: 95%;
+    background-color: #ffffff81;
+    border-radius: 12px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .reminder-notification-inner {
+    height: 50%;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 16px;
+  }
+
+  .reminder-notification-top-part {
+    width: 93%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reminder-notification-heading {
+    font-size: 23pt;
+  }
+
+  .reminder-notification-description {
+    width: 65%;
+    font-size: 16pt;
+  }
+
+  .reminder-notification-priority-indicator {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+
+      /* <--- --- | REMINDER ITEM COMPONENT STYLING | --- ---> */
+
+
+
+  .reminder-item-outter {
+    width: 700px;
+    border: 1px solid black;
+    border-radius: 12px;
+  }
+  .reminder-item-inner {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+  }
+
+  .reminder-item-checkbox {
+    width: 35px;
+    height: 35px;
+  
+  }
+
+  .reminder-item-main-content-holder {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+  }
+
+  .reminder-item-main-content-top-part {
+    display: flex;
+    align-items: center;
+  }
+  .reminder-item-priority-indicator {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: grey;
+  }
+
+  .reminder-item-title {
+    font-size: 21pt;
+  }
+
+  .reminder-item-description {
+    width: 70%;
+    font-size: 17pt;
+  }
+
+
+
+
+    /* <--- --- | APPLICANT'S PROFILE ITEM COMPONENT STYLING | --- ---> */
+
+
+  .applicant-profile-item-outter {
+    width: 880px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #048A81, #92d77b47);
+  }
+  .applicant-profile-item-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .applicant-profile-item-picture-holder {
+    width: 10%;
+  }
+
+  .applicant-profile-item-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+  }
+
+  .applicant-profile-item-main-content-holder {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  }
+
+  .applicant-profile-item-name {
+    height: 20%;
+    font-size: 23pt;
+  }
+
+  .applicant-profile-item-specification-item {
+    font-size: 14pt;
+  }
+
+  .applicant-profile-item-specifications-holder {
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .applicant-profile-item-icons-holder {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-start;
+   
+  }
+  .applicant-profile-item-icon {
+    font-size: 17pt;
+  }
+
+  
+
+
+
+     /* <--- --- | HOME PAGE STAT CARD COMPONENT STYLING | --- ---> */
+
+
+     .stat-card-outter {
+      width: 560px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      border-radius: 12px;
+      background-color: white;
+    }
+    .stat-card-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .stat-card-arrow-shape {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+  
+     /* <-  CUSTOM SHAPE  -> */
+      width:135px;
+      height:92px;
+      background: #FFFFFE;
+      clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+      border-radius: 6px;
+    }
+  
+    .stat-card-arrow-shape-inner-container {
+      height: 100%;
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: -20px;
+    }
+    .stat-card-text-piece {
+      height: 1%;
+      font-size: 16pt;
+    }
+  
+
+
+
+
+
+      /***  <==== === ! | HOME PAGE | ! === ====>  ***/
+
+
+
+  .home-page-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-page-main-content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  .home-page-main-content {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background-color: #FFFFFF;
+  }
+
+  .home-page-stat-cards-holder {
+    height: 70%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+    
+
+  
+
+
+      /***  <==== === ! | APPLICANTS PAGE | ! === ====>  ***/
+
+
+  .applicatns-page-content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .applicants-page-main-content {
+    width: 100%;
+    background-color: #FFFFFf;
+  }
+
+  .applicants-page-center {
+    width: 97%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .applicants-list-holder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    overflow-x: scroll;
+  }
+
+
+
+      /***  <==== === ! | CREATE NEW APPLICANT FORM PAGE | ! === ====>  ***/
+
+
+  .create-applicant-form-page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .create-applicant-form-holder {
+    width: 40%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+  }
+
+  .create-applicant-form {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+  }
+
+  .create-applicant-form-first-part {
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+   .create-applicant-form-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+
+   .create-applicant-form-first-part-inut-field {
+     width: 80%;
+   }
+
+  .create-applicant-form-first-part-input-right {
+    height: 10%;
+  }
+
+ 
+
+
+      /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
+  
+  .calendar-page-content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .calendar-page-main-content {
+    width: 100%;
+    background-color: grey;
+  }
+
+
+
+      /***  <==== === ! | REMINDERS PAGE | ! === ====>  ***/
+
+
+  .reminder-page {
+    width: 100%;
+    height: 100%;
+  }
+
+  .reminders-page-main-content-holder {
+    display: flex;
+    
+  }
+
+
+      /***  <==== === ! | CREATE REMINDER FORM PAGE | ! === ====>  ***/
+
+
+  .create-reminder-form-page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+  }
+
+  .create-reminder-form-holder {
+    width: 65%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+  }
+
+  .create-reminder-form {
+    width: 90%;
+    height: 85%;
+  }
+
+  .create-reminder-form-first-part {
+    display: flex;
+    flex-direction: column;
+  }
+  .create-reminder-first-part-input {
+    font-size: 22pt;
+    width: 40%;
+    height: 40px;
+  }
+  .create-reminder-top-input {
+   border-radius: 12px 12px 0 0 ;
+  }
+  .create-reminder-bottom-input {
+    border-radius: 0 0 12px 12px ;
+   }
+
+   .create-reminder-form-second-part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+   }
+
+  .create-reminder-date {
+    display: flex;
+    flex-direction: column;
+  }
+
+   .create-reminder-title {
+    font-size: 24pt;
+   }
+
+   .create-reminder-date-input {
+    width: 150px;
+    height: 30px;
+    margin-left: 80px;
+   }
+
+   .create-reminder-time-input {
+    width: 170px;
+    height: 30px;
+    margin-left: 80px;    
+    font-size: 30pt;
+    border: none;
+  }
+
+  .create-reminder-form-third-part {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create-reminder-priority-items-holder {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 80px;
+  }
+
+  .priority-item {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .priority-item-low {
+    background-color: #30CA30 ;
+  }
+
+  .priority-item-medium {
+    background-color: #FFA500 ;
+  }
+
+  .priority-item-high {
+    background-color: #FF0000 ;
+  }
+
+
+
+
+
+    /***  <==== === ! | PROJECTS PAGE | ! === ====>  ***/
+
+
+  .projects-page-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .projects-page-main-content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .projects-page-main-content {
+    width: 100%;
+    background-color: grey;
+  }

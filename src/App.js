@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+//Importing the router elements
+import { Routes, Route, Navigate } from "react-router-dom";
+
+//Importing app global pages
+import HomePage from "./Pages/Global Pages/HomePage";
+import ApplicantsListPage from "./Pages/Global Pages/ApplicantsListPage";
+import CalendarPage from "./Pages/Global Pages/CalendarPage";
+import RemindersPage from "./Pages/Global Pages/RemindersPage";
+import ProjectsPage from "./Pages/Global Pages/ProjectsPage";
+
+//Importing app global components
+import NavBar from "./Components/Global Components/NavigationBar";
+import CreateApplicantFormPage from "./Pages/Small Pages/createNewApplicantFormPage";
+import CreateReminderForm from "./Pages/Small Pages/createNewReminderFormPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="app-content-holder">
+        <NavBar />
+        <Routes>
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/applicants" element={<ApplicantsListPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/reminders" element={<RemindersPage />} />
+          <Route
+            path="/createApplicantForm"
+            element={<CreateApplicantFormPage />}
+          />
+          <Route path="/createReminderForm" element={<CreateReminderForm />} />
+
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
