@@ -6,7 +6,7 @@ export default function ProjectsPage() {
     <>
       {/*  <---- |Page content starts here | ---->   */}
 
-      <div className="projects-page-content-wrapper">
+      <div className="projects-page-content-wrapper page-content-wrapper">
         <div className="projects-page-main-content-wrapper">
           <RemindersBar />
 

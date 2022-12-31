@@ -31,7 +31,7 @@ export default function ApplicantsListPage() {
 
   return (
     <>
-      <div className="applicatns-page-content-wrapper">
+      <div className="applicatns-page-content-wrapper page-content-wrapper">
         <RemindersBar />
         <div className="applicants-page-main-content">
           <div className="create-new-applicant-btn" onClick={handleTransfer}>

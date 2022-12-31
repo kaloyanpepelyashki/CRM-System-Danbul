@@ -7,7 +7,7 @@ export default function HomePage() {
     <>
       {/*  <---- |Page content starts here | ---->   */}
 
-      <div className="home-page-content-wrapper">
+      <div className="home-page-content-wrapper page-content-wrapper">
         <div className="home-page-main-content-wrapper">
           <RemindersBar />
 

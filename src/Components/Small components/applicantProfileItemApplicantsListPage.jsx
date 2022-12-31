@@ -2,7 +2,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 
+import { deleteDoc, doc } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
+import { useEffect } from "react";
+
 export default function ApplicantProfile({ applicant }) {
+  const deleteApplicant = async (id) => {
+    const applicantDoc = doc(db, "applicants", id);
+    await deleteDoc(applicantDoc);
+  };
+
   return (
     <>
       <div className="applicant-profile-item-outter">
@@ -24,16 +33,17 @@ export default function ApplicantProfile({ applicant }) {
             </div>
           </div>
           <div className="applicant-profile-item-icons-holder">
-            <p>
-              <FontAwesomeIcon
-                className="applicant-profile-item-icon"
-                icon={faPenToSquare}
-              />
-            </p>
+            <FontAwesomeIcon
+              className="applicant-profile-item-icon"
+              icon={faPenToSquare}
+            />
             <p>
               <FontAwesomeIcon
                 className="applicant-profile-item-icon"
                 icon={faTrash}
+                onClick={() => {
+                  deleteApplicant(applicant.id);
+                }}
               />
             </p>
           </div>

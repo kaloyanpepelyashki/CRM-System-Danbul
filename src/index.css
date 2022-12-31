@@ -11,3 +11,15 @@ body {
 :root {
   overflow-x: hidden;
 }
+
+.page-content-wrapper {
+  overflow-y: hidden;
+}
+.app-content-holder {
+  overflow-y: hidden;
+}
+
+.active {
+  border-bottom: 4px solid #048a81;
+  border-radius: 2px;
+}
