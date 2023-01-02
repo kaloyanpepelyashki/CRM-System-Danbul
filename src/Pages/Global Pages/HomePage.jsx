@@ -15,12 +15,14 @@ export default function HomePage() {
 
           <div className="home-page-main-content page-main-content">
             <div className="home-page-stat-cards-holder">
-              <div className="home-page-stat-card-top">
+              <div className="home-page-stat-card-top-holder">
                 <StatCard Color={"#01575C"} />
               </div>
-              <StatCard Color={"#59BA89"} />
-              <StatCard Color={"#BCD98C"} />
-              <StatCard Color={"#E1F396"} />
+              <div className="home-page-stat-cards-bottom-holder">
+                <StatCard Color={"#59BA89"} />
+                <StatCard Color={"#BCD98C"} />
+                <StatCard Color={"#E1F396"} />
+              </div>
             </div>
           </div>
         </div>
