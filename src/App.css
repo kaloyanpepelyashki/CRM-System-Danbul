@@ -316,11 +316,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .home-page-stat-card-top-holder {
-  margin-bottom: 40px;
+  margin-bottom: 63px;
 }
 
 .home-page-stat-cards-bottom-holder {
-  height: 850px;
+  height: 830px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -451,17 +451,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(to top, #048a81, #048a8129);
 }
 .reminder-page-header-bar {
-  width: 100%;
+  width: 93%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 10px 20px 10px;
+  padding: 65px 40px 20px 40px;
 }
 
 .reminders-page-main-content-holder {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -470,6 +471,23 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .reminders-page-reminder-items-holder {
   width: 80%;
   height: 50%;
+}
+.reminder-page-filter-outter {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: transform 0.3s;
+}
+.reminder-page-filter-outter:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.reminders-page-filter-icon {
+  font-size: 18pt;
 }
 
 /***  <==== === ! | CREATE REMINDER FORM PAGE | ! === ====>  ***/

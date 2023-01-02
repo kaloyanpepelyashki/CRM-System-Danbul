@@ -35,10 +35,12 @@ export default function RemindersPage() {
     <>
       <div className="reminder-page">
         <div className="reminder-page-header-bar">
-          <FontAwesomeIcon
-            icon={faFilter}
-            className="reminders-page-filter-icon"
-          />
+          <div className="reminder-page-filter-outter">
+            <FontAwesomeIcon
+              icon={faFilter}
+              className="reminders-page-filter-icon"
+            />
+          </div>
           <FontAwesomeIcon
             icon={faPlus}
             className="reminders-page-plus-icon plus-icon"

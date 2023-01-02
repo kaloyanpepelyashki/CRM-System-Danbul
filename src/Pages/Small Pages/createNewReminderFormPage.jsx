@@ -1,6 +1,11 @@
+//Importing React hooks
 import { useState } from "react";
+
+//Importing firebase and firebase methods
 import { collection, addDoc } from "@firebase/firestore";
 import { db } from "../../firebaseConfig";
+
+import { ToastContainer, toast } from "react-toastify";
 
 export default function CreateReminderForm() {
   const day = new Date();
@@ -19,6 +24,7 @@ export default function CreateReminderForm() {
         title: title,
         description: description,
       });
+      const notify = () => toast("Wow si easy!");
     } catch (err) {
       console.error("The data sending was impossible due to:", err);
     }
