@@ -32,6 +32,8 @@ export default function CreateApplicantFormPage() {
                   onChange={(event) => {
                     setName(event.target.value);
                   }}
+
+                  
                 />
                 <input
                   type="number"
@@ -47,6 +49,7 @@ export default function CreateApplicantFormPage() {
                   placeholder="Applicant's email address"
                 />
               </div>
+
               <input
                 type="date"
                 className="create-applicant-form-first-part-input-right"

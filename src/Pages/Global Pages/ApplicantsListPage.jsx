@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import { collection, getDocs } from "@firebase/firestore";
 import { db } from "../../firebaseConfig";
 
+//Importing Font Awesome component and icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 //Importing components
 import RemindersBar from "../../Components/Global Components/RemindersBar";
 import ApplicantProfile from "../../Components/Small components/applicantProfileItemApplicantsListPage";
@@ -34,9 +37,11 @@ export default function ApplicantsListPage() {
       <div className="applicatns-page-content-wrapper page-content-wrapper">
         <RemindersBar />
         <div className="applicants-page-main-content">
-          <div className="create-new-applicant-btn" onClick={handleTransfer}>
-            +
-          </div>
+          <FontAwesomeIcon
+            icon={faPlus}
+            className="applicants-page-plus-icon plus-icon"
+            onClick={handleTransfer}
+          />
 
           <div className="applicants-page-center">
             <div className="applicants-list-holder">

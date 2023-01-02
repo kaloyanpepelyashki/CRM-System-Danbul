@@ -1,6 +1,10 @@
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
+//Importing the Font awesome component and icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+
 export default function ReminderItem({ reminder }) {
   const deleteReminder = async (id) => {
     const reminderDoc = doc(db, "reminders", id);
@@ -31,6 +35,10 @@ export default function ReminderItem({ reminder }) {
               <p className="reminder-item-description">Description</p>
             </div>
           </div>
+          <FontAwesomeIcon
+            className="reminder-item-update-icon"
+            icon={faPenToSquare}
+          />
         </div>
       </div>
     </>

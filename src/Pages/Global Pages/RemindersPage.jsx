@@ -1,3 +1,4 @@
+//Importing React hooks
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -5,6 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "@firebase/firestore";
 import { db } from "../../firebaseConfig";
 
+//Importing Font Awesome component and icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faFilter } from "@fortawesome/free-solid-svg-icons";
+
+//Importing components
 import ReminderItem from "../../Components/Small components/reminderItemRemindersPage";
 
 export default function RemindersPage() {
@@ -28,7 +34,17 @@ export default function RemindersPage() {
   return (
     <>
       <div className="reminder-page">
-        <div onClick={handleTransfer}>+</div>
+        <div className="reminder-page-header-bar">
+          <FontAwesomeIcon
+            icon={faFilter}
+            className="reminders-page-filter-icon"
+          />
+          <FontAwesomeIcon
+            icon={faPlus}
+            className="reminders-page-plus-icon plus-icon"
+            onClick={handleTransfer}
+          />
+        </div>
         <div className="reminders-page-main-content-holder">
           <div className="reminders-page-reminder-items-holder">
             {reminders.map((reminder) => (
