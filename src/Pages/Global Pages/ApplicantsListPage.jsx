@@ -9,9 +9,11 @@ import { db } from "../../firebaseConfig";
 //Importing Font Awesome component and icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
 //Importing components
 import RemindersBar from "../../Components/Global Components/RemindersBar";
 import ApplicantProfile from "../../Components/Small components/applicantProfileItemApplicantsListPage";
+import ApplicantListPageMainContent from "../../Components/Small components/applicantsListPageMainContent";
 
 export default function ApplicantsListPage() {
   //Fetching data from firebase
@@ -26,31 +28,11 @@ export default function ApplicantsListPage() {
     getApplicants();
   }, []);
 
-  //Setting navigation to create applicant page
-  const navigate = useNavigate();
-  const handleTransfer = () => {
-    navigate("/createApplicantForm");
-  };
-
   return (
     <>
       <div className="applicatns-page-content-wrapper page-content-wrapper">
         <RemindersBar />
-        <div className="applicants-page-main-content">
-          <FontAwesomeIcon
-            icon={faPlus}
-            className="applicants-page-plus-icon plus-icon"
-            onClick={handleTransfer}
-          />
-
-          <div className="applicants-page-center">
-            <div className="applicants-list-holder">
-              {applicants.map((applicant) => (
-                <ApplicantProfile applicant={applicant} />
-              ))}
-            </div>
-          </div>
-        </div>
+        <ApplicantListPageMainContent applicants={applicants} />
       </div>
     </>
   );

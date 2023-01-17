@@ -49,9 +49,11 @@ export default function RemindersPage() {
         </div>
         <div className="reminders-page-main-content-holder">
           <div className="reminders-page-reminder-items-holder">
-            {reminders.map((reminder) => (
-              <ReminderItem key={reminder.id} reminder={reminder} />
-            ))}
+            {reminders.lenght == 0
+              ? "There is nothing to show, try adding a reminder"
+              : reminders.map((reminder) => (
+                  <ReminderItem key={reminder.id} reminder={reminder} />
+                ))}
           </div>
         </div>
       </div>

@@ -149,6 +149,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   justify-content: center;
   border: 1px solid black;
   border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
 }
 .reminder-item-inner {
   width: 90%;
@@ -363,17 +366,77 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: 100%;
   display: flex;
 }
+
+/* <--- --- | APPLICANT PAGE MAIN CONTENT COMPONENT STYLING | --- ---> */
+
 .applicants-page-main-content {
   width: 100%;
+  height: 100%;
   background-color: #ffffff;
+}
+
+.applicants-page-main-content-header {
+  width: 93%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 55px 40px 35px 40px;
+}
+.applicant-page-tabs-holder {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+}
+.applicant-page-list-tab {
+  width: 76px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px 8px 12px;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #f5f5f5f5;
+  transition: transform 0.3s;
+}
+.applicant-page-list-tab-active {
+  width: 76px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px 8px 12px;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #bcd98c;
+  transition: transform 0.3s;
+}
+
+.applicant-page-list-tab:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .applicants-page-center {
   width: 97%;
-  height: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.applicant-page-layout-block {
+  width: 100%;
+  height: 100%;
+  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.applicant-page-layout-none {
+  display: none;
 }
 .applicants-list-holder {
   height: 100%;
@@ -381,6 +444,85 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   padding-top: 15px;
   overflow-x: scroll;
+}
+
+/* <--- --- | APPLICANT PAGE GRID LAYOUT COMPONENT STYLING | --- ---> */
+.applicants-grid-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-top: 15px;
+}
+.applicants-grid-holder {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 20px 10px 20px;
+}
+.applicants-grid-holder > div {
+  width: 360px;
+  height: 230px;
+  flex: 0 50%;
+}
+
+/* <--- --- | APPLICANT CARD COMPONENT STYLING | --- ---> */
+
+.applicant-card-outter {
+  width: 385px;
+  height: 220px;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-image: linear-gradient(to right, #048a81, #92d77b54);
+}
+
+.applicant-card-inner {
+  width: 97%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8px 15px 8px;
+}
+.applicant-card-top {
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+}
+.applicant-card-image {
+  width: 100px;
+  height: 91px;
+  border-radius: 6px;
+}
+.applicant-card-applicant-name {
+  font-size: 18pt;
+  margin-left: 10px;
+}
+
+.applicant-card-bottom {
+  width: 88%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.applicant-card-applicant-program {
+  font-size: 18pt;
+}
+.applicant-card-onboarding-specific {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.applicant-card-payment {
+  font-size: 16pt;
 }
 
 /***  <==== === ! | CREATE NEW APPLICANT FORM PAGE | ! === ====>  ***/
@@ -394,8 +536,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .create-applicant-form-holder {
-  width: 40%;
-  height: 85%;
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,32 +545,72 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .create-applicant-form {
-  width: 90%;
+  width: 85%;
   height: 90%;
   background-color: white;
+  overflow-y: scroll;
 }
-
-.create-applicant-form-first-part {
-  height: 25%;
+.create-applicant-form-personal-data {
+  width: 99%;
+  height: 20%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  padding: 80px 60px 60px 30px;
 }
-.create-applicant-form-left {
-  width: 50%;
-  height: 100%;
+.applicant-form-personal-left-side {
+  width: 1fr;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+.applicant-form-personal-field {
+  width: 320px;
+  height: 22px;
+}
+.applicant-form-personal-right-side {
+  padding-right: 200px;
+}
+.applicant-form-education-data {
+  width: 99%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 60px 60px 30px;
+}
+.applicant-form-items-flex {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px 20px 0px;
+}
+.applicant-form-item {
+  width: 184px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #ffffff;
 }
 
-.create-applicant-form-first-part-inut-field {
-  width: 80%;
+.applicant-form-select {
+  width: 30%;
+  height: 22px;
 }
-
-.create-applicant-form-first-part-input-right {
-  height: 10%;
+.add-english-hours {
+  width: 5%;
+}
+.language-certif-data {
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 60px 60px 30px;
+}
+.applicant-form-flex-2 {
+  width: 75%;
 }
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
@@ -462,14 +644,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .reminders-page-main-content-holder {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .reminders-page-reminder-items-holder {
-  width: 80%;
+  width: 60%;
   height: 50%;
 }
 .reminder-page-filter-outter {
@@ -595,6 +777,32 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: #ff0000;
 }
 
+/* <--- --- | PROJECT PAGE PROJECT ITEM COMPONENT STYLING | --- ---> */
+
+.project-item-outter {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 35px 10px 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+.project-item-outter {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-item-year {
+  font-size: 26pt;
+}
+.project-item-title {
+  font-size: 22pt;
+}
+
 /***  <==== === ! | PROJECTS PAGE | ! === ====>  ***/
 
 .projects-page-content-wrapper {
@@ -610,4 +818,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .projects-page-main-content {
   width: 100%;
   background-color: grey;
+}
+.project-page-page-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects-page-projects-items-holder {
+  height: 100%;
+  width: 90%;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
 }
