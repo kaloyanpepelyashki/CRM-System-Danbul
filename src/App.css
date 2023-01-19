@@ -685,7 +685,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .create-reminder-form-holder {
   width: 65%;
-  height: 80%;
+  height: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -695,6 +695,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .create-reminder-form {
   width: 90%;
   height: 85%;
+  overflow-y: scroll;
 }
 
 .create-reminder-form-first-part {
@@ -775,6 +776,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .priority-item-high {
   background-color: #ff0000;
+}
+.buttons-holder-component {
+  width: 100%;
 }
 
 /* <--- --- | PROJECT PAGE PROJECT ITEM COMPONENT STYLING | --- ---> */

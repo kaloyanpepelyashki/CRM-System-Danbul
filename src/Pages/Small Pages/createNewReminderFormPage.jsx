@@ -159,6 +159,12 @@ export default function CreateReminderForm() {
                   High
                 </option>
               </div>
+              <div className="buttons-holder-component">
+                <button className="global-btn" onClick={() => navigate(-1)}>
+                  Back
+                </button>
+                <button className="global-btn">Submit</button>
+              </div>
             </div>
           </form>
         </div>
