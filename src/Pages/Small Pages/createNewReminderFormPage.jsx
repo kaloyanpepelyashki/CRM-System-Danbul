@@ -23,6 +23,7 @@ export default function CreateReminderForm() {
   //Setting the states
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [priority, setPriority] = useState("")
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -38,6 +39,8 @@ export default function CreateReminderForm() {
       await addDoc(collectionRef, {
         title: title,
         description: description,
+        priority: priority
+
       });
       toast.success("Does it workkkkkk", {
         position: "top-center",
@@ -102,7 +105,7 @@ export default function CreateReminderForm() {
                 create-reminder-top-input"
                 placeholder="Add title..."
                 onChange={(event) => {
-                  setDescription(event.target.value);
+                  setTitle(event.target.value);
                 }}
               />
               <input
@@ -110,7 +113,7 @@ export default function CreateReminderForm() {
                 className="create-reminder-first-part-input create-reminder-middle-input"
                 placeholder="Add Description..."
                 onChange={(event) => {
-                  setTitle(event.target.value);
+                  setDescription(event.target.value);
                 }}
               />
               <input
@@ -138,7 +141,7 @@ export default function CreateReminderForm() {
 
             <div className="create-reminder-form-third-part">
               <h4 className="create-reminder-title">Priority:</h4>
-              <div className="create-reminder-priority-items-holder">
+              <div className="create-reminder-priority-items-holder" onClick={(event) => {setPriority(event.target.value)}}>
                 <option></option>
                 <option
                   className="priority-item priority-item-low"

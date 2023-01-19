@@ -1,5 +1,6 @@
 //Importing components
 import RemindersBar from "../../Components/Global Components/RemindersBar";
+import PercentageBoxComponent from "../../Components/Small components/percentageBoxHomePage";
 import StatCard from "../../Components/Small components/StatCardsHomePage";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
 
           {/*  <---- | Main section starts here | ---->   */}
 
+           {/* <==== */}
           <div className="home-page-main-content page-main-content">
             <div className="home-page-stat-cards-holder">
               <div className="home-page-stat-card-top-holder">
@@ -24,7 +26,9 @@ export default function HomePage() {
                 <StatCard Color={"#E1F396"} />
               </div>
             </div>
+            < PercentageBoxComponent />
           </div>
+          {/* <==== */}
         </div>
       </div>
     </>

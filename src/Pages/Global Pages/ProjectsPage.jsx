@@ -2,7 +2,7 @@
 import { useEffect, useNavigate, useState } from "react";
 
 //Importing components
-import RemindersBar from "../../Components/Global Components/RemindersBar";
+
 import ProjectItem from "../../Components/Small components/projectItem";
 
 //Importing firebase and firebase methids
@@ -37,7 +37,6 @@ export default function ProjectsPage() {
 
       <div className="projects-page-content-wrapper page-content-wrapper">
         <div className="projects-page-main-content-wrapper">
-          <RemindersBar />
 
           {/*  <---- | Main section starts here | ---->   */}
 

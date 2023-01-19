@@ -85,7 +85,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .reminder-bar-title {
-  font-size: 30pt;
+  font-size: 20px;
   color: #ffff;
 }
 
@@ -125,12 +125,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .reminder-notification-heading {
-  font-size: 23pt;
+  font-size: 10pt;
+  width: 65%;
+  padding-top: 10px;
 }
 
 .reminder-notification-description {
   width: 65%;
-  font-size: 16pt;
+  font-size: 9pt;
 }
 
 .reminder-notification-priority-indicator {
@@ -152,6 +154,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 40px;
+  background-color: #f5f5f5;
 }
 .reminder-item-inner {
   width: 90%;
@@ -221,6 +224,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .applicant-profile-item-picture-holder {
@@ -328,6 +332,52 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   justify-content: space-between;
 }
+.stat-card-text{
+  padding-left: 30px;
+  font-size: 20px;
+}
+/***  <==== === ! | HOME PAGE PERCENTIGE BOX| ! === ====>  ***/
+
+
+.progress {	
+	height: 10px;
+	width: 300px;	
+	position: relative;
+	margin: 15px 15px;
+	border-radius: 20px;
+	background-color: #d8d8d8;
+}
+
+.progress-done {
+	background-color: #048a81;
+	box-shadow: #bcd98c;
+	height: 100%;
+	width: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	color: #fff;
+	opacity: 0; 
+	transition: 1s ease 0.3s;
+}
+
+.home-page-progress-bar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  border-radius: 15px;
+  background-color: #d9d9d993;
+}
+.home-page-progress-bar-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
 
 /***  <==== === ! | HOME PAGE | ! === ====>  ***/
 
@@ -348,6 +398,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 100%;
   padding-top: 50px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .home-page-stat-cards-holder {
@@ -466,7 +519,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .applicants-grid-holder > div {
   width: 360px;
-  height: 230px;
+  height: 250px;
   flex: 0 50%;
 }
 
@@ -672,6 +725,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 18pt;
 }
 
+
 /***  <==== === ! | CREATE REMINDER FORM PAGE | ! === ====>  ***/
 
 .create-reminder-form-page-container {
@@ -784,21 +838,24 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* <--- --- | PROJECT PAGE PROJECT ITEM COMPONENT STYLING | --- ---> */
 
 .project-item-outter {
-  width: 50%;
-  height: 100%;
+  width: 70%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 10px 35px 10px 20px;
+  padding: 4px 70px 4px 20px;
   background-color: #f5f5f5;
   border-radius: 12px;
   margin-bottom: 40px;
 }
-.project-item-outter {
-  width: 70%;
+.project-item-inner {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.project-image{
+  width: 40%;
 }
 .project-item-year {
   font-size: 26pt;
@@ -829,13 +886,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #048a81;
 }
 .projects-page-projects-items-holder {
-  height: 100%;
-  width: 90%;
-  overflow-x: scroll;
+  height: 68%;
+  width: 89%;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 80px;
 }
+
