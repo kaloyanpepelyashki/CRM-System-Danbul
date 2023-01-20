@@ -142,7 +142,7 @@ export default function CreateApplicantFormPage() {
                 </div>
               </div>
             </div>
-            <button onClick={handleCommit}>Commit</button>
+            <button className="commit-button" onClick={handleCommit}>Commit</button>
           </form>
         </div>
       </div>

@@ -602,6 +602,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 90%;
   background-color: white;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .create-applicant-form-personal-data {
   width: 99%;
@@ -646,6 +647,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-items: center;
   border: 1px solid black;
   background-color: #ffffff;
+  cursor: pointer;
+  padding: 5px;
+}
+.applicant-form-item:active{
+  background-color: #048a81;
 }
 
 .applicant-form-select {
@@ -664,6 +670,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .applicant-form-flex-2 {
   width: 75%;
+}
+.commit-button{
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #048a81;
+  color: #d8d8d8;
 }
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
