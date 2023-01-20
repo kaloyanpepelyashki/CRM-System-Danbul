@@ -24,11 +24,11 @@ export default function ApplicantProfile({ applicant }) {
             <h4 className="applicant-profile-item-name">{applicant.name}</h4>
             <div className="applicant-profile-item-specifications-holder">
               <p className="applicant-profile-item-specification-item">
-                MMD-BAA
+                {applicant.StudyProgram} - {applicant.university}
               </p>
               <p className="applicant-profile-item-specification-item">Paid</p>
               <p className="applicant-profile-item-specification-item">
-                12.12.2022
+                {applicant.OnBoardingstart}
               </p>
             </div>
           </div>

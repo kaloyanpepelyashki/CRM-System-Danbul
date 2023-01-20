@@ -11,6 +11,8 @@ export default function CreateApplicantFormPage() {
   const [start, setStart] = useState("");
   //"DTE" stands for "Desired type of education"
   const [dte, setDET] = useState("");
+  const [uni, setUni] = useState("");
+  const [program, setProgram] = useState("");
 
   const handleCommit = async (e) => {
     e.preventDefault();
@@ -21,10 +23,22 @@ export default function CreateApplicantFormPage() {
         email: email,
         OnBoardingstart: start,
         DesiredTypeOfEducation: dte,
+        university: uni,
+        StudyProgram: program,
       });
     } catch (err) {
       console.error("The data sending was impossible due to:", err);
     }
+  };
+
+  const [choiceProgram, setChoiceProgram] = useState(0);
+  const [choiceENGCert, setChoiceENGCert] = useState(0);
+
+  const setProgramColor = (index) => {
+    setChoiceProgram(index);
+  };
+  const setCertificateColor = (index) => {
+    setChoiceENGCert(index);
   };
   return (
     <>
@@ -79,45 +93,66 @@ export default function CreateApplicantFormPage() {
                 }}
                 className="applicant-form-items-flex"
               >
-                <div className="applicant-form-item" value="Ap Degree">
+                <option
+                  onClick={() => setProgramColor(1)}
+                  className={
+                    choiceProgram === 1
+                      ? "applicant-form-item applicant-form-item-active"
+                      : "applicant-form-item"
+                  }
+                  value="Ap Degree"
+                >
                   <p className="applicant-form-item-heading">AP Degree</p>
-                </div>
-                <div className="applicant-form-item">
+                </option>
+                <option
+                  onClick={() => setProgramColor(2)}
+                  className={
+                    choiceProgram === 2
+                      ? "applicant-form-item applicant-form-item-active"
+                      : "applicant-form-item"
+                  }
+                  value="Top-up Degree"
+                >
                   <p className="applicant-form-item-heading">Top-up Degree</p>
-                </div>
-                <div className="applicant-form-item">
+                </option>
+                <option
+                  onClick={() => setProgramColor(3)}
+                  className={
+                    choiceProgram === 3
+                      ? "applicant-form-item applicant-form-item-active"
+                      : "applicant-form-item"
+                  }
+                  value="Bachelor degree"
+                >
                   <p className="applicant-form-item-heading">
                     Bachelor's Degree
                   </p>
-                </div>
+                </option>
               </div>
-              <select className="applicant-form-select">
-                <option value="Automotive Technology">
-                  Automotive Technology
-                </option>
-                <option value="Branding and Marketing Management">
-                  Branding and Marketing Management
-                </option>
-                <option value="Comerce Management">
-                  Comassable Management
-                </option>
-                <option value="Computer Science">Computer Science</option>
+
+              <select
+                onChange={(event) => {
+                  setProgram(event.target.value);
+                }}
+                className="applicant-form-select"
+              >
+                <option value="AT">Automotive Technology</option>
+                <option value="BMM">Branding and Marketing Management</option>
+                <option value="CM">Comassable Management</option>
+                <option value="CS">Computer Science</option>
               </select>
 
               <select
                 className="applicant-form-select"
                 placeholder="University"
+                onChange={(event) => {
+                  setUni(event.target.value);
+                }}
               >
-                <option value="Dania Academy">Dania Academy</option>
-                <option value="VIA University College">
-                  VIA University College
-                </option>
-                <option value="Business Academy Aarhus">
-                  Business Academy Aarhus
-                </option>
-                <option value="International Business Academy">
-                  International Business Academy
-                </option>
+                <option value="DA">Dania Academy</option>
+                <option value="VIA">VIA University College</option>
+                <option value="BAA">Business Academy Aarhus</option>
+                <option value="IBA">International Business Academy</option>
               </select>
               <input
                 type="number"
@@ -128,21 +163,55 @@ export default function CreateApplicantFormPage() {
             <div className="language-certif-data">
               <h2 className="applicant-form-heading">English Certificate</h2>
               <div className="applicant-form-items-flex applicant-form-flex-2">
-                <div className="applicant-form-item" value="Ap Degree">
+                <option
+                  onClick={() => setCertificateColor(1)}
+                  className={
+                    choiceENGCert === 1
+                      ? "applicant-form-item-active applicant-form-item"
+                      : "applicant-form-item"
+                  }
+                  value="Ap Degree"
+                >
                   <p className="applicant-form-item-heading">Needs OPT</p>
-                </div>
-                <div className="applicant-form-item" value="Ap Degree">
+                </option>
+                <option
+                  onClick={() => setCertificateColor(2)}
+                  className={
+                    choiceENGCert === 2
+                      ? "applicant-form-item-active applicant-form-item"
+                      : "applicant-form-item"
+                  }
+                  value="Ap Degree"
+                >
                   <p className="applicant-form-item-heading">Passed OPT</p>
-                </div>
-                <div className="applicant-form-item" value="Ap Degree">
+                </option>
+                <option
+                  onClick={() => setCertificateColor(3)}
+                  className={
+                    choiceENGCert === 3
+                      ? "applicant-form-item-active applicant-form-item"
+                      : "applicant-form-item"
+                  }
+                  value="Ap Degree"
+                >
                   <p className="applicant-form-item-heading">Has other</p>
-                </div>
-                <div className="applicant-form-item" value="Ap Degree">
-                  <p className="applicant-form-item-heading">Needs other</p>
-                </div>
+                </option>
+                <option
+                  onClick={() => setCertificateColor(4)}
+                  className={
+                    choiceENGCert === 4
+                      ? "applicant-form-item-active applicant-form-item"
+                      : "applicant-form-item"
+                  }
+                  value="Ap Degree"
+                >
+                  <p className="applicant-form-item-heading">Needs others</p>
+                </option>
               </div>
             </div>
-            <button className="commit-button" onClick={handleCommit}>Commit</button>
+            <button className="commit-button" onClick={handleCommit}>
+              Commit
+            </button>
           </form>
         </div>
       </div>

@@ -332,34 +332,33 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   justify-content: space-between;
 }
-.stat-card-text{
+.stat-card-text {
   padding-left: 30px;
   font-size: 20px;
 }
 /***  <==== === ! | HOME PAGE PERCENTIGE BOX| ! === ====>  ***/
 
-
-.progress {	
-	height: 10px;
-	width: 300px;	
-	position: relative;
-	margin: 15px 15px;
-	border-radius: 20px;
-	background-color: #d8d8d8;
+.progress {
+  height: 10px;
+  width: 300px;
+  position: relative;
+  margin: 15px 15px;
+  border-radius: 20px;
+  background-color: #d8d8d8;
 }
 
 .progress-done {
-	background-color: #048a81;
-	box-shadow: #bcd98c;
-	height: 100%;
-	width: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 20px;
-	color: #fff;
-	opacity: 0; 
-	transition: 1s ease 0.3s;
+  background-color: #048a81;
+  box-shadow: #bcd98c;
+  height: 100%;
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: #fff;
+  opacity: 0;
+  transition: 1s ease 0.3s;
 }
 
 .home-page-progress-bar-box {
@@ -376,8 +375,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   justify-content: space-around;
 }
-
-
 
 /***  <==== === ! | HOME PAGE | ! === ====>  ***/
 
@@ -650,8 +647,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   padding: 5px;
 }
-.applicant-form-item:active{
+.applicant-form-item-active {
   background-color: #048a81;
+  color: #ffffff;
 }
 
 .applicant-form-select {
@@ -671,7 +669,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .applicant-form-flex-2 {
   width: 75%;
 }
-.commit-button{
+.commit-button {
   padding: 10px;
   border-radius: 15px;
   cursor: pointer;
@@ -739,7 +737,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .reminders-page-filter-icon {
   font-size: 18pt;
 }
-
 
 /***  <==== === ! | CREATE REMINDER FORM PAGE | ! === ====>  ***/
 
@@ -869,7 +866,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   align-items: flex-start;
 }
-.project-image{
+.project-image {
   width: 40%;
 }
 .project-item-year {
@@ -912,4 +909,3 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-items: center;
   padding-top: 80px;
 }
-
