@@ -496,6 +496,30 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   overflow-x: scroll;
 }
 
+.popup-message-outter {
+  width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8d8d8;
+}
+.popup-message-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+}
+.popup-message-top-section {
+  align-self: flex-end;
+}
+.popup-message-close-icon {
+  font-size: 16pt;
+}
+
 /* <--- --- | APPLICANT PAGE GRID LAYOUT COMPONENT STYLING | --- ---> */
 .applicants-grid-center {
   width: 100%;

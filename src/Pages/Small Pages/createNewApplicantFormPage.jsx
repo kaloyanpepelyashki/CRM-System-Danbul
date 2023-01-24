@@ -1,10 +1,16 @@
+//Importing React hooks
 import { useState } from "react";
+
+//Importing firebase and firebase methods
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
+//Importing components
+import PopUpMessage from "../../Components/Small components/pop-upMessageComponent";
+
 export default function CreateApplicantFormPage() {
   const collectionRef = collection(db, "applicants");
-
+  //Getting the data from the input fields
   const [name, setName] = useState("");
   const [number, setNumber] = useState(0);
   const [email, setEmail] = useState("");
@@ -17,6 +23,7 @@ export default function CreateApplicantFormPage() {
   const handleCommit = async (e) => {
     e.preventDefault();
     try {
+      //Uploading the data in the database (using a firebas addDoc method)
       await addDoc(collectionRef, {
         name: name,
         telNumber: number,
@@ -25,12 +32,14 @@ export default function CreateApplicantFormPage() {
         DesiredTypeOfEducation: dte,
         university: uni,
         StudyProgram: program,
-      });
+        //Closing the Pop-up message.
+      }).then(() => setToggleUpUpdate(false));
     } catch (err) {
       console.error("The data sending was impossible due to:", err);
     }
   };
 
+  //Marking up the activated box from the choice boxes on the page
   const [choiceProgram, setChoiceProgram] = useState(0);
   const [choiceENGCert, setChoiceENGCert] = useState(0);
 
@@ -40,6 +49,10 @@ export default function CreateApplicantFormPage() {
   const setCertificateColor = (index) => {
     setChoiceENGCert(index);
   };
+
+  //Triggering the pop-up message
+  const [toggleUpUpdate, setToggleUpUpdate] = useState(false);
+
   return (
     <>
       <div className="create-applicant-form-page-container">
@@ -164,7 +177,7 @@ export default function CreateApplicantFormPage() {
               <h2 className="applicant-form-heading">English Certificate</h2>
               <div className="applicant-form-items-flex applicant-form-flex-2">
                 <option
-                  onClick={() => setCertificateColor(1)}
+                  onClick={() => setCertificateColor()}
                   className={
                     choiceENGCert === 1
                       ? "applicant-form-item-active applicant-form-item"
@@ -209,9 +222,28 @@ export default function CreateApplicantFormPage() {
                 </option>
               </div>
             </div>
-            <button className="commit-button" onClick={handleCommit}>
+            <button
+              className="commit-button"
+              onClick={() => setToggleUpUpdate(true)}
+            >
               Commit
             </button>
+            <PopUpMessage
+              stateUpdate={setToggleUpUpdate}
+              toggleUp={toggleUpUpdate}
+            >
+              <div className="popup-message-buttons-holder">
+                <button className="commit-button" onClick={handleCommit}>
+                  Commit
+                </button>
+                <button
+                  onClick={() => setToggleUpUpdate(false)}
+                  className="cancel-button"
+                >
+                  Cancel
+                </button>
+              </div>
+            </PopUpMessage>
           </form>
         </div>
       </div>
