@@ -10,7 +10,7 @@ export default function StatCard({ Color }) {
               <p className="stat-card-title stat-card-text-piece">Applicants</p>
             </div>
           </div>
-          <p className="stat-card-text">Some text about the applicans</p>
+          <p className="stat-card-text">Number of applicants for MMD</p>
         </div>
       </div>
     </>
