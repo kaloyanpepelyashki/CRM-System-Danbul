@@ -518,6 +518,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .popup-message-close-icon {
   font-size: 16pt;
+  cursor: pointer;
 }
 
 /* <--- --- | APPLICANT PAGE GRID LAYOUT COMPONENT STYLING | --- ---> */
@@ -599,6 +600,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 16pt;
 }
 
+
 /***  <==== === ! | CREATE NEW APPLICANT FORM PAGE | ! === ====>  ***/
 
 .create-applicant-form-page-container {
@@ -675,6 +677,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: #048a81;
   color: #ffffff;
 }
+.applicant-form-item:hover{
+  background-color: #048a81;
+  color: #ffffff;
+}
 
 .applicant-form-select {
   width: 30%;
@@ -694,13 +700,51 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: 75%;
 }
 .commit-button {
-  padding: 10px;
-  border-radius: 15px;
+  padding: 10px 30px;
+  border: 5px solid #06C1B5;
+  border-radius:  15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  background-color: #048a81;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 6px #048A67;
+}
+.commit-button2 {
+  padding: 5px 9px;
+  border: 5px solid #06C1B5;
+  border-radius:  15px;
   cursor: pointer;
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: #048a81;
-  color: #d8d8d8;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 6px #048A67;
+}
+.cancel-button{
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cancel-button2{
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 20px;
+  margin-left: 140px;
+  cursor: pointer;
+}
+.buttons-holder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-inline-end: 100px;
+  margin-top: 100px;
+
 }
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
@@ -869,7 +913,31 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .buttons-holder-component {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 100px;
 }
+.global-back-btn{
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 20px;
+  cursor: pointer;
+}
+.global-submit-btn{
+  padding: 10px 30px;
+  border: 5px solid #06C1B5;
+  border-radius:  15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  background-color: #048a81;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 6px #048A67;
+}
+
 
 /* <--- --- | PROJECT PAGE PROJECT ITEM COMPONENT STYLING | --- ---> */
 

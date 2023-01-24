@@ -51,7 +51,7 @@ export default function CreateApplicantFormPage() {
   };
 
   //Triggering the pop-up message
-  const [toggleUpUpdate, setToggleUpUpdate] = useState(false);
+  const [toggleUpUpdate, setToggleUpUpdate] = useState(true);
 
   return (
     <>
@@ -59,8 +59,10 @@ export default function CreateApplicantFormPage() {
         <div className="create-applicant-form-holder">
           <form className="create-applicant-form">
             {/* //<--- -- Personal Data part -- --->  */}
+        
             <div className="create-applicant-form-personal-data">
-              <div className="applicant-form-personal-left-side">
+              <div className="applicant-form-personal-left-side"> 
+                 <h2 className="applicant-form-heading">Personal data</h2>
                 <input
                   type="text"
                   className="applicant-form-personal-field"
@@ -222,23 +224,31 @@ export default function CreateApplicantFormPage() {
                 </option>
               </div>
             </div>
-            <button
-              className="commit-button"
-              onClick={() => setToggleUpUpdate(true)}
-            >
-              Commit
-            </button>
+            <div className="buttons-holder">
+                <button
+                  className="commit-button"
+                  onClick={() => setToggleUpUpdate(true)}
+                >
+                  Commit
+                </button>
+                <button
+                      onClick={() => setToggleUpUpdate(false)}
+                      className="cancel-button"
+                    >
+                      Cancel
+                    </button>
+                </div>
             <PopUpMessage
               stateUpdate={setToggleUpUpdate}
               toggleUp={toggleUpUpdate}
             >
               <div className="popup-message-buttons-holder">
-                <button className="commit-button" onClick={handleCommit}>
+                <button className="commit-button2" onClick={handleCommit}>
                   Commit
                 </button>
                 <button
                   onClick={() => setToggleUpUpdate(false)}
-                  className="cancel-button"
+                  className="cancel-button2"
                 >
                   Cancel
                 </button>

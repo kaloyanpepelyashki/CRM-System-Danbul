@@ -137,8 +137,6 @@ export default function CreateReminderForm() {
               </div>
             </div>
 
-            <button onClick={handleClick}> Commit </button>
-
             <div className="create-reminder-form-third-part">
               <h4 className="create-reminder-title">Priority:</h4>
               <div className="create-reminder-priority-items-holder" onClick={(event) => {setPriority(event.target.value)}}>
@@ -163,10 +161,10 @@ export default function CreateReminderForm() {
                 </option>
               </div>
               <div className="buttons-holder-component">
-                <button className="global-btn" onClick={() => navigate(-1)}>
+                <button className="global-back-btn" onClick={() => navigate(-1)}>
                   Back
                 </button>
-                <button className="global-btn">Submit</button>
+                <button className="global-submit-btn">Submit</button>
               </div>
             </div>
           </form>
