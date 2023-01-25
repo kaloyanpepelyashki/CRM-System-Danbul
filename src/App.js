@@ -14,6 +14,7 @@ import ProjectsPage from "./Pages/Global Pages/ProjectsPage";
 import NavBar from "./Components/Global Components/NavigationBar";
 import CreateApplicantFormPage from "./Pages/Small Pages/createNewApplicantFormPage";
 import CreateReminderForm from "./Pages/Small Pages/createNewReminderFormPage";
+import ApplicantInProfilePage from "./Pages/Small Pages/applicantsProfilePage";
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
           <Route path="/applicants" element={<ApplicantsListPage />} />
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/reminders" element={<RemindersPage />} />
+          <Route
+            path="/applicantProfile"
+            element={<ApplicantInProfilePage />}
+          />
           <Route
             path="/createApplicantForm"
             element={<CreateApplicantFormPage />}

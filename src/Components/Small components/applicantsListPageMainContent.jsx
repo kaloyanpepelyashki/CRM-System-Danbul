@@ -1,4 +1,4 @@
-//Importing hooks
+//Importing react hooks
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
