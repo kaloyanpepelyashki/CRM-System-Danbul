@@ -746,44 +746,101 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-top: 100px;
 
 }
+
+
+
 /***  <==== === ! | APPLICANTS IN PROFILE PAGE| ! === ====>  ***/
-.in-applicants-profile-page-inner{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #048A81;
-  margin-top: 100px;
-}
- .in-applicants-profile-page-notes{
-  width: 80%;
-  margin-top: 50px;
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #ffff;
-  border: 2px solid black;
-  border-radius: 15px;
-} 
-.in-applicant-profile-picture-holder{
-  width: 20%;
-}
-.in-applicant-profile-picture{
+
+.in-applicants-all-content-holder{
   width: 100%;
-  height: 100;
-  border-radius: 6px;
-  margin-left: 620px;
-  margin-top: 60px;
-}
-.in-applicant-profile-information-holder-outer{
-  width: 50%;
-  background-color: #D9D9D9;
-}
-.in-applicant-profile-information-holder-inner{
+}       
+.in-applicants-page-inner-conntent{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
 }
+.in-applicants-page-notes-component{
+  width: 100%;
+}
+.in-applicant-profile-page {
+  width: 100%;
+  height: 100%;
+
+}
+.in-applicant-profile-page-main-content-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100% ;
+}
+.in-applicants-all-content-holder{
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 7px 15px;
+}
+.in-applicants-profile-page-notes-color{
+  width: 100%;
+  height: 80px;
+  background-color: #048A81;
+  margin-bottom: -40px;
+}
+.in-applicants-profile-page-notes-items-holder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.in-applicants-profile-page-note-item{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.in-applicants-profile-page-pic-holder{
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.in-applicants-profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+.in-applicants-profile-page-information-holder-holder{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+.in-applicants-profile-page-information-holder{
+  width: 150%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #D9D9D9;
+  padding: 5px;
+}
+.in-applicants-profile-page-information {
+  text-align: right;
+}
+.in-applicants-profile-page-information-holder-white-part{
+  width: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  
+}
+
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
 
