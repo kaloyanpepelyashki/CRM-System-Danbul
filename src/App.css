@@ -600,7 +600,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 16pt;
 }
 
-
 /***  <==== === ! | CREATE NEW APPLICANT FORM PAGE | ! === ====>  ***/
 
 .create-applicant-form-page-container {
@@ -677,7 +676,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: #048a81;
   color: #ffffff;
 }
-.applicant-form-item:hover{
+.applicant-form-item:hover {
   background-color: #048a81;
   color: #ffffff;
 }
@@ -701,36 +700,36 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .commit-button {
   padding: 10px 30px;
-  border: 5px solid #06C1B5;
-  border-radius:  15px;
+  border: 5px solid #06c1b5;
+  border-radius: 15px;
   cursor: pointer;
   margin-bottom: 20px;
   margin-left: 100px;
   background-color: #048a81;
   color: #ffffff;
   font-size: 20px;
-  box-shadow: 0 6px #048A67;
+  box-shadow: 0 6px #048a67;
 }
 .commit-button2 {
   padding: 5px 9px;
-  border: 5px solid #06C1B5;
-  border-radius:  15px;
+  border: 5px solid #06c1b5;
+  border-radius: 15px;
   cursor: pointer;
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: #048a81;
   color: #ffffff;
   font-size: 20px;
-  box-shadow: 0 6px #048A67;
+  box-shadow: 0 6px #048a67;
 }
-.cancel-button{
+.cancel-button {
   background: none;
   border: none;
   color: grey;
   font-size: 20px;
   cursor: pointer;
 }
-.cancel-button2{
+.cancel-button2 {
   background: none;
   border: none;
   color: grey;
@@ -738,59 +737,55 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-left: 140px;
   cursor: pointer;
 }
-.buttons-holder{
+.buttons-holder {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-inline-end: 100px;
   margin-top: 100px;
-
 }
-
-
 
 /***  <==== === ! | APPLICANTS IN PROFILE PAGE| ! === ====>  ***/
 
-.in-applicants-all-content-holder{
+.in-applicants-all-content-holder {
   width: 100%;
-}       
-.in-applicants-page-inner-conntent{
+}
+.in-applicants-page-inner-conntent {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.in-applicants-page-notes-component{
+.in-applicants-page-notes-component {
   width: 100%;
 }
 .in-applicant-profile-page {
   width: 100%;
   height: 100%;
-
 }
 .in-applicant-profile-page-main-content-wrapper {
   display: flex;
   height: 100%;
-  width: 100% ;
+  width: 100%;
 }
-.in-applicants-all-content-holder{
+.in-applicants-all-content-holder {
   width: 100%;
   height: 90%;
   overflow-y: scroll;
   padding: 7px 15px;
 }
-.in-applicants-profile-page-notes-color{
+.in-applicants-profile-page-notes-color {
   width: 100%;
   height: 80px;
-  background-color: #048A81;
+  background-color: #048a81;
   margin-bottom: -40px;
 }
-.in-applicants-profile-page-notes-items-holder{
+.in-applicants-profile-page-notes-items-holder {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.in-applicants-profile-page-note-item{
+.in-applicants-profile-page-note-item {
   width: 300px;
   height: 200px;
   display: flex;
@@ -800,7 +795,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 15px;
   background-color: #fff;
 }
-.in-applicants-profile-page-pic-holder{
+.in-applicants-profile-page-pic-holder {
   width: 400px;
   display: flex;
   align-items: center;
@@ -812,7 +807,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 100%;
   border-radius: 6px;
 }
-.in-applicants-profile-page-information-holder-holder{
+.in-applicants-profile-page-information-holder-holder {
   width: 50%;
   display: flex;
   flex-direction: row;
@@ -820,27 +815,25 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-top: 30px;
   justify-content: space-evenly;
 }
-.in-applicants-profile-page-information-holder{
+.in-applicants-profile-page-information-holder {
   width: 150%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   padding: 5px;
 }
 .in-applicants-profile-page-information {
   text-align: right;
 }
-.in-applicants-profile-page-information-holder-white-part{
+.in-applicants-profile-page-information-holder-white-part {
   width: 150%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 40px;
-  
 }
-
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
 
@@ -1013,26 +1006,25 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: row;
   margin-top: 100px;
 }
-.global-back-btn{
+.global-back-btn {
   background: none;
   border: none;
   color: grey;
   font-size: 20px;
   cursor: pointer;
 }
-.global-submit-btn{
+.global-submit-btn {
   padding: 10px 30px;
-  border: 5px solid #06C1B5;
-  border-radius:  15px;
+  border: 5px solid #06c1b5;
+  border-radius: 15px;
   cursor: pointer;
   margin-bottom: 20px;
   margin-left: 100px;
   background-color: #048a81;
   color: #ffffff;
   font-size: 20px;
-  box-shadow: 0 6px #048A67;
+  box-shadow: 0 6px #048a67;
 }
-
 
 /* <--- --- | PROJECT PAGE PROJECT ITEM COMPONENT STYLING | --- ---> */
 
@@ -1048,10 +1040,26 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-bottom: 40px;
 }
 .project-item-inner {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.project-item-icons-holder {
+  width: 70px;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.project-item-icon {
+  font-size: 17pt;
+  transition: transform 0.3s;
+}
+.project-item-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 .project-image {
   width: 40%;
@@ -1077,7 +1085,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .projects-page-main-content {
   width: 100%;
-  background-color: grey;
+  background-color: #048a81;
 }
 .project-page-page-center {
   width: 100%;
@@ -1095,4 +1103,118 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   align-items: center;
   padding-top: 80px;
+}
+.projects-page-top-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 58px 40px 10px 20px;
+}
+
+/* <--- --- | PROJECT PAGE CREATE NEW PROJECT CARD STYLING | --- ---> */
+.project-item-input {
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.109);
+  margin: 30px 50px;
+}
+.project-item-input:focus-visible {
+  background-color: #f5f5f5;
+  outline: none;
+}
+.create-project-card-close-btn {
+  align-self: flex-end;
+  font-size: 16pt;
+  margin-top: 17px;
+}
+.create-project-card-close-btn:hover {
+  cursor: pointer;
+}
+.create-project-card-inner {
+  width: 100%;
+}
+.button-create-project {
+  font-size: 16px;
+}
+
+.create-project-card-anim {
+  -webkit-animation: scale-in-hor-right 0.3s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-hor-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  margin-bottom: 70px;
+}
+.create-project-card-anim-exit {
+  -webkit-animation: scale-out-hor-right 0.5s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) ease-out both;
+  animation: scale-out-hor-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    ease-out both;
+}
+
+/* //Enter animation create project card */
+@-webkit-keyframes scale-in-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+/* //Exit animation create project card */
+@-webkit-keyframes scale-out-hor-right {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-hor-right {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
 }

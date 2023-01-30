@@ -1,6 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar(props) {
+  const currentProjectId = props.projectId;
+  const params = useParams();
+  const currentProjectIdParams = params.projectId;
   return (
     <>
       {/*  <---- |Navigation bar component starts here | ---->   */}
@@ -12,19 +15,35 @@ export default function NavBar() {
           {/*  <---- |Navigation bar items start here | ---->   */}
 
           <div className="global-navbar-items">
-            <NavLink className="global-navba-link-item" to="/">
+            <NavLink
+              className="global-navba-link-item"
+              to={`/Dashboard/${currentProjectIdParams}`}
+              state={{ projectId: currentProjectId }}
+            >
               Home
             </NavLink>
-            <NavLink className="global-navba-link-item" to="/applicants">
+            <NavLink
+              className="global-navba-link-item"
+              to={`/applicants/${currentProjectIdParams}`}
+              state={{ projectId: currentProjectId }}
+            >
               Applicants
             </NavLink>
-            <NavLink className="global-navba-link-item" to="/calendar">
+            <NavLink
+              className="global-navba-link-item"
+              to={`/calendar/${currentProjectIdParams}`}
+              state={{ projectId: currentProjectId }}
+            >
               Calendar
             </NavLink>
-            <NavLink className="global-navba-link-item" to="/reminders">
+            <NavLink
+              className="global-navba-link-item"
+              to={`/reminders/${currentProjectIdParams}`}
+              state={{ projectId: currentProjectId }}
+            >
               Reminders
             </NavLink>
-            <NavLink className="global-navba-link-item" to="projects">
+            <NavLink className="global-navba-link-item" to="/projects">
               Projects
             </NavLink>
           </div>

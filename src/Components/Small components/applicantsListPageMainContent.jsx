@@ -15,11 +15,14 @@ import ApplicantProfile from "../../Components/Small components/applicantProfile
 import ListLayout from "./applicantsListPageListLayout";
 import GridLayout from "./applicantsListPageGridLayout";
 
-export default function ApplicantListPageMainContent({ applicants }) {
+export default function ApplicantListPageMainContent({
+  applicants,
+  projectId,
+}) {
   //Setting navigation to create applicant page
   const navigate = useNavigate();
-  const handleTransfer = () => {
-    navigate("/createApplicantForm");
+  const handleTransfer = (id) => {
+    navigate(`/createApplicantForm/${id}`);
   };
 
   const [toggleOn, setToggleOn] = useState(1);
@@ -28,7 +31,9 @@ export default function ApplicantListPageMainContent({ applicants }) {
     setToggleOn(index);
   };
 
+  const currentProjectId = projectId;
   const Applicants = applicants;
+
   return (
     <>
       <div className="applicants-page-main-content">
@@ -36,7 +41,7 @@ export default function ApplicantListPageMainContent({ applicants }) {
           <FontAwesomeIcon
             icon={faPlus}
             className="applicants-page-plus-icon plus-icon"
-            onClick={handleTransfer}
+            onClick={() => handleTransfer(currentProjectId)}
           />
           <div className="applicant-page-tabs-holder">
             <div
@@ -78,7 +83,7 @@ export default function ApplicantListPageMainContent({ applicants }) {
                 : "applicant-page-layout-none"
             }
           >
-            <ListLayout applicants={Applicants} />
+            <ListLayout projectId={currentProjectId} applicants={Applicants} />
           </div>
           <div
             className={
@@ -87,7 +92,7 @@ export default function ApplicantListPageMainContent({ applicants }) {
                 : "applicant-page-layout-none"
             }
           >
-            <GridLayout applicants={Applicants} />
+            <GridLayout projectId={currentProjectId} applicants={Applicants} />
           </div>
         </div>
       </div>
