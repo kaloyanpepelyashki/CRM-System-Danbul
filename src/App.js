@@ -1,6 +1,6 @@
 import "./App.css";
 
-//Importing the router elements
+//Importing the router elements and hooks
 import { Routes, Route, Navigate } from "react-router-dom";
 
 //Importing app global pages
@@ -20,19 +20,21 @@ function App() {
   return (
     <>
       <div className="app-content-holder">
-        <NavBar />
         <Routes>
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/applicants" element={<ApplicantsListPage />} />
-          <Route path="/calendar" element={<CalendarPage />} />
-          <Route path="/reminders" element={<RemindersPage />} />
+          <Route path="/" element={<ProjectsPage />} />
+          <Route path="/Dashboard/:projectId" element={<HomePage />} />
+          <Route
+            path="/applicants/:projectId"
+            element={<ApplicantsListPage />}
+          />
+          <Route path="/calendar/:projectId" element={<CalendarPage />} />
+          <Route path="/reminders/:projectId" element={<RemindersPage />} />
           <Route
             path="/applicantProfile"
             element={<ApplicantInProfilePage />}
           />
           <Route
-            path="/createApplicantForm"
+            path="/createApplicantForm/:projectId"
             element={<CreateApplicantFormPage />}
           />
           <Route path="/createReminderForm" element={<CreateReminderForm />} />

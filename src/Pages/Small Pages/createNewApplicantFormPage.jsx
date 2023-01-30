@@ -1,6 +1,9 @@
 //Importing React hooks
 import { useState } from "react";
 
+//Importing React router hooks
+import { useParams } from "react-router-dom";
+
 //Importing firebase and firebase methods
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
@@ -9,6 +12,7 @@ import { db } from "../../firebaseConfig";
 import PopUpMessage from "../../Components/Small components/pop-upMessageComponent";
 
 export default function CreateApplicantFormPage() {
+  const params = useParams();
   const collectionRef = collection(db, "applicants");
   //Getting the data from the input fields
   const [name, setName] = useState("");
@@ -32,6 +36,8 @@ export default function CreateApplicantFormPage() {
         DesiredTypeOfEducation: dte,
         university: uni,
         StudyProgram: program,
+        ProjectId: params.projectId,
+
         //Closing the Pop-up message.
       }).then(() => setToggleUpUpdate(false));
     } catch (err) {
@@ -59,10 +65,10 @@ export default function CreateApplicantFormPage() {
         <div className="create-applicant-form-holder">
           <form className="create-applicant-form">
             {/* //<--- -- Personal Data part -- --->  */}
-        
+
             <div className="create-applicant-form-personal-data">
-              <div className="applicant-form-personal-left-side"> 
-                 <h2 className="applicant-form-heading">Personal data</h2>
+              <div className="applicant-form-personal-left-side">
+                <h2 className="applicant-form-heading">Personal data</h2>
                 <input
                   type="text"
                   className="applicant-form-personal-field"
@@ -225,19 +231,19 @@ export default function CreateApplicantFormPage() {
               </div>
             </div>
             <div className="buttons-holder">
-                <button
-                  className="commit-button"
-                  onClick={() => setToggleUpUpdate(true)}
-                >
-                  Commit
-                </button>
-                <button
-                      onClick={() => setToggleUpUpdate(false)}
-                      className="cancel-button"
-                    >
-                      Cancel
-                    </button>
-                </div>
+              <button
+                className="commit-button"
+                onClick={() => setToggleUpUpdate(true)}
+              >
+                Commit
+              </button>
+              <button
+                onClick={() => setToggleUpUpdate(false)}
+                className="cancel-button"
+              >
+                Cancel
+              </button>
+            </div>
             <PopUpMessage
               stateUpdate={setToggleUpUpdate}
               toggleUp={toggleUpUpdate}

@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "@firebase/firestore";
 import { db } from "../../firebaseConfig";
 
+//Importing toast components from react Toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -23,7 +24,7 @@ export default function CreateReminderForm() {
   //Setting the states
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [priority, setPriority] = useState("")
+  const [priority, setPriority] = useState("");
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -39,8 +40,7 @@ export default function CreateReminderForm() {
       await addDoc(collectionRef, {
         title: title,
         description: description,
-        priority: priority
-
+        priority: priority,
       });
       toast.success("Does it workkkkkk", {
         position: "top-center",
@@ -139,7 +139,12 @@ export default function CreateReminderForm() {
 
             <div className="create-reminder-form-third-part">
               <h4 className="create-reminder-title">Priority:</h4>
-              <div className="create-reminder-priority-items-holder" onClick={(event) => {setPriority(event.target.value)}}>
+              <div
+                className="create-reminder-priority-items-holder"
+                onClick={(event) => {
+                  setPriority(event.target.value);
+                }}
+              >
                 <option></option>
                 <option
                   className="priority-item priority-item-low"
@@ -161,7 +166,10 @@ export default function CreateReminderForm() {
                 </option>
               </div>
               <div className="buttons-holder-component">
-                <button className="global-back-btn" onClick={() => navigate(-1)}>
+                <button
+                  className="global-back-btn"
+                  onClick={() => navigate(-1)}
+                >
                   Back
                 </button>
                 <button className="global-submit-btn">Submit</button>

@@ -1,5 +1,7 @@
-//Importing hooks
-import { useNavigate } from "react-router-dom";
+//Importing React router hooks
+import { useLocation, useParams } from "react-router-dom";
+
+//Importin React hooks
 import { useState, useEffect } from "react";
 
 //Importing firebase and firebase methods
@@ -10,6 +12,7 @@ import { db } from "../../firebaseConfig";
 import RemindersBar from "../../Components/Global Components/RemindersBar";
 import ApplicantProfile from "../../Components/Small components/applicantProfileItemApplicantsListPage";
 import ApplicantListPageMainContent from "../../Components/Small components/applicantsListPageMainContent";
+import NavBar from "../../Components/Global Components/NavigationBar";
 
 export default function ApplicantsListPage() {
   //Fetching data from firebase
@@ -24,11 +27,18 @@ export default function ApplicantsListPage() {
     getApplicants();
   }, []);
 
+  const params = useParams();
+  const currentProjectId = params.projectId;
+
   return (
     <>
+      <NavBar />
       <div className="applicatns-page-content-wrapper page-content-wrapper">
         <RemindersBar />
-        <ApplicantListPageMainContent applicants={applicants} />
+        <ApplicantListPageMainContent
+          projectId={currentProjectId}
+          applicants={applicants}
+        />
       </div>
     </>
   );

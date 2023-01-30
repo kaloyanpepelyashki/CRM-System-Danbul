@@ -1,6 +1,8 @@
 //Importing React hooks
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+
+//Importing React router hooks
+import { useNavigate, useLocation } from "react-router-dom";
 
 //Importing firebase and firebase methods
 import { collection, getDocs } from "@firebase/firestore";
@@ -12,6 +14,7 @@ import { faPlus, faFilter } from "@fortawesome/free-solid-svg-icons";
 
 //Importing components
 import ReminderItem from "../../Components/Small components/reminderItemRemindersPage";
+import NavBar from "../../Components/Global Components/NavigationBar";
 
 export default function RemindersPage() {
   const [reminders, setReminders] = useState([]);
@@ -31,8 +34,12 @@ export default function RemindersPage() {
 
     getReminders();
   }, [reminders]);
+
+  const locationStats = useLocation();
+  const currentProjectId = locationStats.state.projectId;
   return (
     <>
+      <NavBar projectId={currentProjectId} />
       <div className="reminder-page">
         <div className="reminder-page-header-bar">
           <div className="reminder-page-filter-outter">
@@ -49,11 +56,13 @@ export default function RemindersPage() {
         </div>
         <div className="reminders-page-main-content-holder">
           <div className="reminders-page-reminder-items-holder">
-            {reminders.lenght == 0
-              ? "There is nothing to show, try adding a reminder"
-              : reminders.map((reminder) => (
-                  <ReminderItem key={reminder.id} reminder={reminder} />
-                ))}
+            {reminders.length === 0 ? (
+              <h2>There is nothing to show, try adding a reminder</h2>
+            ) : (
+              reminders.map((reminder) => (
+                <ReminderItem key={reminder.id} reminder={reminder} />
+              ))
+            )}
           </div>
         </div>
       </div>
