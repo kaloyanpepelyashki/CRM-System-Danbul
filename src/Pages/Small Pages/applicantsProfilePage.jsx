@@ -1,7 +1,14 @@
 //Importing components
 import RemindersBar from "../../Components/Global Components/RemindersBar";
+import { useNavigate} from 'react-router-dom';
+
 
 export default function ApplicantInProfilePage() {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+      navigate(-1);
+    }
   return (
     <>
     <div className="in-applicant-profile-page">
@@ -68,8 +75,9 @@ export default function ApplicantInProfilePage() {
                   <p className="in-applicants-profile-page-information">BAA</p>
                   <p className="in-applicants-profile-page-information">MMD</p>
                   <p className="in-applicants-profile-page-information">_</p>
-                </div>
+                </div>	
               </div>
+              <button className="in-applicants-profile-page-back-button" onClick={goBack}>Back</button>	
           </div>
         </div>
       </div>

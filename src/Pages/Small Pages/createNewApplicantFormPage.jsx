@@ -95,6 +95,7 @@ export default function CreateApplicantFormPage() {
                 />
               </div>
               <div className="applicant-form-personal-right-side">
+                <div className="applicant-form-personal-right-side-empty"></div>
                 <input
                   type="date"
                   className="applicant-form-personal-field"
@@ -228,6 +229,8 @@ export default function CreateApplicantFormPage() {
                 >
                   <p className="applicant-form-item-heading">Needs others</p>
                 </option>
+
+                
               </div>
             </div>
             <div className="buttons-holder">

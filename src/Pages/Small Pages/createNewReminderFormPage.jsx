@@ -99,6 +99,7 @@ export default function CreateReminderForm() {
         <div className="create-reminder-form-holder">
           <form className="create-reminder-form">
             <div className="create-reminder-form-first-part">
+            <h4 className="create-reminder-title">Create reminder</h4>
               <input
                 type="text"
                 className="create-reminder-first-part-input
