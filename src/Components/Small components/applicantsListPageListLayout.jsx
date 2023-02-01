@@ -15,14 +15,10 @@ export default function ListLayout({ applicants }) {
     (applicant) => applicant.ProjectId === currentProjectId
   );
 
-  const handleTransfer = () => {
-    navigate("/applicantProfile");
-  };
   return (
     <div className="applicants-list-holder">
-      <button onClick={handleTransfer}>Go to applicant ApplicantProfile</button>
       {applicantsFiltered.lenght == 0
-        ? "There is nothing to show, try adding a reminder"
+        ? "There is nothing to show, try creating a new record..."
         : applicantsFiltered.map((applicant) => (
             <ApplicantProfile applicant={applicant} key={applicant.id} />
           ))}

@@ -99,7 +99,7 @@ export default function CreateReminderForm() {
         <div className="create-reminder-form-holder">
           <form className="create-reminder-form">
             <div className="create-reminder-form-first-part">
-            <h4 className="create-reminder-title">Create reminder</h4>
+              <h4 className="create-reminder-title">Create reminder</h4>
               <input
                 type="text"
                 className="create-reminder-first-part-input
@@ -168,12 +168,15 @@ export default function CreateReminderForm() {
               </div>
               <div className="buttons-holder-component">
                 <button
+                  type="button"
                   className="global-back-btn"
                   onClick={() => navigate(-1)}
                 >
                   Back
                 </button>
-                <button className="global-submit-btn">Submit</button>
+                <button className="global-submit-btn" onClick={handleClick}>
+                  Submit
+                </button>
               </div>
             </div>
           </form>

@@ -35,11 +35,9 @@ export default function RemindersPage() {
     getReminders();
   }, [reminders]);
 
-  const locationStats = useLocation();
-  const currentProjectId = locationStats.state.projectId;
   return (
     <>
-      <NavBar projectId={currentProjectId} />
+      <NavBar />
       <div className="reminder-page">
         <div className="reminder-page-header-bar">
           <div className="reminder-page-filter-outter">
@@ -57,7 +55,9 @@ export default function RemindersPage() {
         <div className="reminders-page-main-content-holder">
           <div className="reminders-page-reminder-items-holder">
             {reminders.length === 0 ? (
-              <h2 className="font-heading" >There is nothing to show, try adding a reminder</h2>
+              <h2 className="font-heading">
+                There is nothing to show, try adding a reminder
+              </h2>
             ) : (
               reminders.map((reminder) => (
                 <ReminderItem key={reminder.id} reminder={reminder} />
