@@ -314,7 +314,7 @@ export default function CreateApplicantFormPage() {
               </button>
               <button
                 type="back"
-                onClick={() => navigate(-2)}
+                onClick={() => navigate(-1)}
                 className="cancel-button font-paragraph-bigger"
               >
                 Cancel
