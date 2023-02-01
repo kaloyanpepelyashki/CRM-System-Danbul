@@ -24,13 +24,13 @@ export default function ApplicantProfile({ applicant }) {
             className="applicant-profile-item-picture"
           />
           <div className="applicant-profile-item-main-content-holder">
-            <h4 className="applicant-profile-item-name">{applicant.name}</h4>
+            <h4 className="applicant-profile-item-name font-paragraph">{applicant.name}</h4>
             <div className="applicant-profile-item-specifications-holder">
               <p className="applicant-profile-item-specification-item">
                 {applicant.StudyProgram} - {applicant.university}
               </p>
-              <p className="applicant-profile-item-specification-item">Paid</p>
-              <p className="applicant-profile-item-specification-item">
+              <p className="applicant-profile-item-specification-item font-paragraph">Paid</p>
+              <p className="applicant-profile-item-specification-item font-paragraph">
                 {applicant.OnBoardingstart}
               </p>
             </div>

@@ -16,34 +16,34 @@ export default function NavBar(props) {
 
           <div className="global-navbar-items">
             <NavLink
-              className="global-navba-link-item"
+              className="global-navba-link-item font-heading"
               to={`/Dashboard/${currentProjectIdParams}`}
               state={{ projectId: currentProjectId }}
             >
               Home
             </NavLink>
             <NavLink
-              className="global-navba-link-item"
+              className="global-navba-link-item font-heading"
               to={`/applicants/${currentProjectIdParams}`}
               state={{ projectId: currentProjectId }}
             >
               Applicants
             </NavLink>
             <NavLink
-              className="global-navba-link-item"
+              className="global-navba-link-item font-heading"
               to={`/calendar/${currentProjectIdParams}`}
               state={{ projectId: currentProjectId }}
             >
               Calendar
             </NavLink>
             <NavLink
-              className="global-navba-link-item"
+              className="global-navba-link-item font-heading"
               to={`/reminders/${currentProjectIdParams}`}
               state={{ projectId: currentProjectId }}
             >
               Reminders
             </NavLink>
-            <NavLink className="global-navba-link-item" to="/projects">
+            <NavLink className="global-navba-link-item font-heading" to="/projects">
               Projects
             </NavLink>
           </div>

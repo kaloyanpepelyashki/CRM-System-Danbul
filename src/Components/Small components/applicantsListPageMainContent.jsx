@@ -56,7 +56,7 @@ export default function ApplicantListPageMainContent({
                 icon={faList}
                 className="applicants-page-tab-icon"
               />
-              <p className="applicant-page-tab-text">List</p>
+              <p className="applicant-page-tab-text font-paragraph">List</p>
             </div>
             <div
               className={
@@ -70,7 +70,7 @@ export default function ApplicantListPageMainContent({
                 icon={faTableCells}
                 className="applicants-page-tab-icon"
               />
-              <p className="applicant-page-tab-text">Grid</p>
+              <p className="applicant-page-tab-text font-paragraph">Grid</p>
             </div>
           </div>
         </div>

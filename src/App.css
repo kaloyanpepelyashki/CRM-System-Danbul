@@ -1,3 +1,22 @@
+@import url("https://use.typekit.net/dsh6xpy.css");
+
+
+.font-heading{
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.font-paragraph{
+  font-family: "open-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-paragraph-bigger{
+  font-family: "open-sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /**********************************************************************/
 
 /****                                                              ****/
@@ -649,9 +668,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 5px;
   border: 1px solid #048a81
 }
-.applicant-form-personal-right-side {
-  padding-right: 200px;
-}
+
 .applicant-form-personal-right-side-empty {
   height: 72px;
 }
@@ -713,6 +730,41 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .applicant-form-flex-2 {
   width: 75%;
+}
+.final-details-data{
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 60px 60px 30px;
+}
+.applicant-form-final-data-left-side {
+  width: 1fr;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.applicant-form-final-data{
+  width: 15%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #048a81;
+  margin-bottom: 10px;
+}
+.applicant-form-final-data-math{
+  width: 10%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #048a81;
+  margin-bottom: 10px;
+}
+
+.GPA{
+  width: 15%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #048a81;
 }
 .commit-button {
   padding: 10px 30px;

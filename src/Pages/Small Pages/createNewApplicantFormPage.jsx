@@ -68,7 +68,7 @@ export default function CreateApplicantFormPage() {
 
             <div className="create-applicant-form-personal-data">
               <div className="applicant-form-personal-left-side">
-                <h2 className="applicant-form-heading">Personal data</h2>
+                <h2 className="applicant-form-heading font-heading">Personal data</h2>
                 <input
                   type="text"
                   className="applicant-form-personal-field"
@@ -108,7 +108,7 @@ export default function CreateApplicantFormPage() {
             </div>
             {/* //<--- -- Education Data part -- --->  */}
             <div className="applicant-form-education-data">
-              <h2 className="applicant-form-heading">Education</h2>
+              <h2 className="applicant-form-heading font-heading">Education</h2>
               <div
                 onChange={(event) => {
                   setDET(event.target.value);
@@ -124,7 +124,7 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Ap Degree"
                 >
-                  <p className="applicant-form-item-heading">AP Degree</p>
+                  <p className="applicant-form-item-heading font-paragraph-bigger">AP Degree</p>
                 </option>
                 <option
                   onClick={() => setProgramColor(2)}
@@ -135,7 +135,7 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Top-up Degree"
                 >
-                  <p className="applicant-form-item-heading">Top-up Degree</p>
+                  <p className="applicant-form-item-heading font-paragraph-bigger">Top-up Degree</p>
                 </option>
                 <option
                   onClick={() => setProgramColor(3)}
@@ -146,7 +146,7 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Bachelor degree"
                 >
-                  <p className="applicant-form-item-heading">
+                  <p className="applicant-form-item-heading font-paragraph-bigger">
                     Bachelor's Degree
                   </p>
                 </option>
@@ -156,7 +156,7 @@ export default function CreateApplicantFormPage() {
                 onChange={(event) => {
                   setProgram(event.target.value);
                 }}
-                className="applicant-form-select"
+                className="applicant-form-select font-paragraph"
               >
                 <option value="AT">Automotive Technology</option>
                 <option value="BMM">Branding and Marketing Management</option>
@@ -183,7 +183,7 @@ export default function CreateApplicantFormPage() {
               />
             </div>
             <div className="language-certif-data">
-              <h2 className="applicant-form-heading">English Certificate</h2>
+              <h2 className="applicant-form-heading font-heading">English Certificate</h2>
               <div className="applicant-form-items-flex applicant-form-flex-2">
                 <option
                   onClick={() => setCertificateColor()}
@@ -194,7 +194,7 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Ap Degree"
                 >
-                  <p className="applicant-form-item-heading">Needs OPT</p>
+                  <p className="applicant-form-item-heading font-paragraph-bigger">Needs OPT</p>
                 </option>
                 <option
                   onClick={() => setCertificateColor(2)}
@@ -205,7 +205,7 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Ap Degree"
                 >
-                  <p className="applicant-form-item-heading">Passed OPT</p>
+                  <p className="applicant-form-item-heading font-paragraph-bigger">Passed OPT</p>
                 </option>
                 <option
                   onClick={() => setCertificateColor(3)}
@@ -216,7 +216,7 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Ap Degree"
                 >
-                  <p className="applicant-form-item-heading">Has other</p>
+                  <p className="applicant-form-item-heading font-paragraph-bigger">Has other</p>
                 </option>
                 <option
                   onClick={() => setCertificateColor(4)}
@@ -227,22 +227,58 @@ export default function CreateApplicantFormPage() {
                   }
                   value="Ap Degree"
                 >
-                  <p className="applicant-form-item-heading">Needs others</p>
-                </option>
-
-                
+                  <p className="applicant-form-item-heading font-paragraph-bigger">Needs others</p>
+                </option> 
               </div>
             </div>
+
+              {/* Final details data part */}
+
+              <div className="final-details-data" >
+               <h2 className="applicant-form-heading font-heading">Final details</h2>
+                <div className="applicant-form-final-data-left-side">
+                    <select
+                      className="applicant-form-select font-paragraph font-paragraph">
+                      <option value="DA">Dania Academy</option>
+                      <option value="VIA">VIA University College</option>
+                      <option value="BAA">Business Academy Aarhus</option>
+                      <option value="IBA">International Business Academy</option>
+                  </select>
+                  <input
+                    type="text"
+                    className="applicant-form-final-data"
+                    placeholder="Upload files..."/>
+                    
+                    <input
+                    type="text"
+                    className="applicant-form-final-data-math"
+                    placeholder="Math B..."/>
+                </div>
+             
+              <div className="applicant-form-final-data-right-side" >
+              <div className="applicant-form-final-data-right-side-empty"></div>
+              <input
+                type="number"
+                className="applicant-form-final-data-right-side GPA"
+                placeholder="Predicted GPA"
+              />
+              <input
+                type="number"
+                className="applicant-form-final-data-right-side GPA"
+                placeholder="Final GPA"
+              />
+              </div>
+              </div>
             <div className="buttons-holder">
               <button
-                className="commit-button"
+                className="commit-button font-paragraph-bigger"
                 onClick={() => setToggleUpUpdate(true)}
               >
                 Commit
               </button>
               <button
                 onClick={() => setToggleUpUpdate(false)}
-                className="cancel-button"
+                className="cancel-button font-paragraph-bigger"
               >
                 Cancel
               </button>

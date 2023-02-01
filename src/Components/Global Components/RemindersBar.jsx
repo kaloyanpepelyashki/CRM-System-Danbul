@@ -31,7 +31,7 @@ export default function RemindersBar() {
     <>
       <div className="reminders-bar">
         <div className="reminder-bar-title-holder">
-          <h2 className="reminder-bar-title">Reminders</h2>
+          <h2 className="reminder-bar-title font-heading">Reminders</h2>
           <FontAwesomeIcon
             icon={faPlus}
             className="reminder-bar-plus-icon plus-icon"

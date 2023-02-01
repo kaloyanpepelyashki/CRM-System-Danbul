@@ -23,13 +23,13 @@ export default function ApplicantInProfilePage() {
               <div className="in-applicants-profile-page-notes-color"></div>
               <div className="in-applicants-profile-page-notes-items-holder">
                 <div className="in-applicants-profile-page-note-item">
-                  <p className="in-applicants-profile-page-note-text">Note</p>
+                  <p className="in-applicants-profile-page-note-text font-paragraph">Note</p>
                 </div>
                 <div className="in-applicants-profile-page-note-item">
-                  <p className="in-applicants-profile-page-note-text">Note</p>
+                  <p className="in-applicants-profile-page-note-text font-paragraph">Note</p>
                 </div>
                 <div className="in-applicants-profile-page-note-item">
-                  <p className="in-applicants-profile-page-note-text">Note</p>
+                  <p className="in-applicants-profile-page-note-text font-paragraph">Note</p>
                 </div>
               </div>
             </div>
@@ -41,43 +41,43 @@ export default function ApplicantInProfilePage() {
               </div>
               <div className="in-applicants-profile-page-information-holder-holder">
                 <div className="in-applicants-profile-page-information-holder">
-                  <p className="in-applicants-profile-page-information">Name:</p>
-                  <p className="in-applicants-profile-page-information">Email:</p>
-                  <p className="in-applicants-profile-page-information">Facebook profile:</p>
-                  <p className="in-applicants-profile-page-information">Onboarding date start:</p>
-                  <p className="in-applicants-profile-page-information">Phone:</p>
-                  <p className="in-applicants-profile-page-information">Category:</p>
-                  <p className="in-applicants-profile-page-information">Optagelse link:</p>
-                  <p className="in-applicants-profile-page-information">Education:</p>
-                  <p className="in-applicants-profile-page-information">English hours:</p>
-                  <p className="in-applicants-profile-page-information">Math B:</p>
-                  <p className="in-applicants-profile-page-information">English certificate:</p>
-                  <p className="in-applicants-profile-page-information">Predicted GPA:</p>
-                  <p className="in-applicants-profile-page-information">Final GPA:</p>
-                  <p className="in-applicants-profile-page-information">1st Wished university:</p>
-                  <p className="in-applicants-profile-page-information">1st Wished program:</p>
-                  <p className="in-applicants-profile-page-information">Accepted at:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Name:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Email:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Facebook profile:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Onboarding date start:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Phone:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Category:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Optagelse link:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Education:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">English hours:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Math B:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">English certificate:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Predicted GPA:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Final GPA:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">1st Wished university:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">1st Wished program:</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Accepted at:</p>
                 </div>
                 <div className="in-applicants-profile-page-information-holder-white-part">
-                  <p className="in-applicants-profile-page-information">Svetlin Pepkov</p>
-                  <p className="in-applicants-profile-page-information">svetlin.pepkov@gmail.com</p>
-                  <p className="in-applicants-profile-page-information">Facebook profile</p>
-                  <p className="in-applicants-profile-page-information">01.01.2023</p>
-                  <p className="in-applicants-profile-page-information">0877708063</p>
-                  <p className="in-applicants-profile-page-information">-</p>
-                  <p className="in-applicants-profile-page-information">https://opagelse.com</p>
-                  <p className="in-applicants-profile-page-information">AP Degree</p>
-                  <p className="in-applicants-profile-page-information">43</p>
-                  <p className="in-applicants-profile-page-information">Yes</p>
-                  <p className="in-applicants-profile-page-information">Oxford certificate</p>
-                  <p className="in-applicants-profile-page-information">5.76</p>
-                  <p className="in-applicants-profile-page-information">5.76</p>
-                  <p className="in-applicants-profile-page-information">BAA</p>
-                  <p className="in-applicants-profile-page-information">MMD</p>
-                  <p className="in-applicants-profile-page-information">_</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Svetlin Pepkov</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">svetlin.pepkov@gmail.com</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Facebook profile</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">01.01.2023</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">0877708063</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">-</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">https://opagelse.com</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">AP Degree</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">43</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Yes</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">Oxford certificate</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">5.76</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">5.76</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">BAA</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">MMD</p>
+                  <p className="in-applicants-profile-page-information font-paragraph">_</p>
                 </div>	
               </div>
-              <button className="in-applicants-profile-page-back-button" onClick={goBack}>Back</button>	
+              <button className="in-applicants-profile-page-back-button font-paragraph" onClick={goBack}>Back</button>	
           </div>
         </div>
       </div>
