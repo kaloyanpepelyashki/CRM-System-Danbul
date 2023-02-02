@@ -1,17 +1,16 @@
 @import url("https://use.typekit.net/dsh6xpy.css");
 
-
-.font-heading{
+.font-heading {
   font-family: "montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
-.font-paragraph{
+.font-paragraph {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.font-paragraph-bigger{
+.font-paragraph-bigger {
   font-family: "open-sans", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -69,7 +68,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .global-navbar-items {
-  width: 50%;
+  width: 54%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -80,6 +79,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-self: center;
   text-decoration: none;
   color: black;
+}
+.global-navba-last-link {
+  margin-left: 50px;
 }
 
 /* <--- --- | REMINDERS-BAR COMPONENT STYLING | --- ---> */
@@ -249,18 +251,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .applicant-profile-item-picture-holder {
   width: 10%;
 }
-
 .applicant-profile-item-picture {
   width: 120px;
   height: 120px;
   border-radius: 6px;
 }
-
+.applicant-profile-item-picture:hover {
+  cursor: pointer;
+}
 .applicant-profile-item-main-content-holder {
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.applicant-profile-item-main-content-holder:hover {
+  cursor: pointer;
 }
 
 .applicant-profile-item-name {
@@ -479,7 +485,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 8px 15px 8px 12px;
   border: 1px solid black;
   border-radius: 12px;
-  background-color: #7FC89C;
+  background-color: #7fc89c;
   transition: transform 0.3s;
 }
 
@@ -583,6 +589,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   padding: 15px 8px 15px 8px;
 }
+.applicant-card-inner:hover {
+  cursor: pointer;
+}
 .applicant-card-top {
   width: 88%;
   display: flex;
@@ -627,7 +636,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #048a814c, #048A81 )
+  background: linear-gradient(to bottom, #048a814c, #048a81);
 }
 
 .create-applicant-form-holder {
@@ -667,7 +676,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
-  box-shadow: 2px 2px #048a81;
+  box-shadow: 2px 2px #048a81;;
 }
 
 .applicant-form-personal-right-side-empty {
@@ -735,30 +744,33 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .applicant-form-flex-2 {
   width: 75%;
 }
-.final-details-data{
+.final-details-data {
   width: 99%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   padding: 10px 60px 60px 30px;
 }
+.applicant-form-final-heading {
+  margin-left: 30px;
+}
 .applicant-form-final-data-left-side {
-  width: 1fr;
+  width: 50%;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.applicant-form-final-data{
-  width: 15%;
+.applicant-form-final-data {
+  width: 50%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
   margin-bottom: 10px;
   box-shadow: 2px 2px #048a81;
 }
-.applicant-form-final-data-math{
-  width: 10%;
+.applicant-form-final-data-math {
+  width: 50%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
@@ -766,12 +778,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   box-shadow: 2px 2px #048a81;
 }
 
-.GPA{
-  width: 15%;
+.GPA {
+  width: 50%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
-  box-shadow: 2px 2px #048a81;
 }
 .commit-button {
   padding: 10px 30px;
@@ -817,7 +828,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   flex-direction: row;
   justify-content: space-between;
   margin-inline-end: 100px;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 /***  <==== === ! | APPLICANTS IN PROFILE PAGE| ! === ====>  ***/
@@ -910,7 +921,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-items: flex-start;
   margin-left: 40px;
 }
-.in-applicants-profile-page-back-button{
+.in-applicants-profile-page-back-button {
   background: none;
   border: none;
   color: grey;
@@ -985,7 +996,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom, #048A81, #048A81)
+  background-image: linear-gradient(to bottom, #048a81, #048a81);
 }
 
 .create-reminder-form-holder {
@@ -1188,7 +1199,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom, #048a8145, #048A81);
+  background-image: linear-gradient(to bottom, #048a8145, #048a81);
 }
 .projects-page-projects-items-holder {
   height: 68%;

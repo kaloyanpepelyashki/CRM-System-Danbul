@@ -10,8 +10,7 @@ import CalendarPage from "./Pages/Global Pages/CalendarPage";
 import RemindersPage from "./Pages/Global Pages/RemindersPage";
 import ProjectsPage from "./Pages/Global Pages/ProjectsPage";
 
-//Importing app global components
-import NavBar from "./Components/Global Components/NavigationBar";
+//Importing app small pages
 import CreateApplicantFormPage from "./Pages/Small Pages/createNewApplicantFormPage";
 import CreateReminderForm from "./Pages/Small Pages/createNewReminderFormPage";
 import ApplicantInProfilePage from "./Pages/Small Pages/applicantsProfilePage";
@@ -37,7 +36,10 @@ function App() {
             path="/createApplicantForm/:projectId"
             element={<CreateApplicantFormPage />}
           />
-          <Route path="/createReminderForm" element={<CreateReminderForm />} />
+          <Route
+            path="/createReminderForm/:projectId"
+            element={<CreateReminderForm />}
+          />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

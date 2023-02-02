@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 //Importing React router hooks
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 //Importing firebase and firebase methods
 import { collection, getDocs } from "@firebase/firestore";
@@ -17,13 +17,16 @@ import ReminderItem from "../../Components/Small components/reminderItemReminder
 import NavBar from "../../Components/Global Components/NavigationBar";
 
 export default function RemindersPage() {
+  const navigate = useNavigate();
+  const params = useParams();
+
   const [reminders, setReminders] = useState([]);
   const collectionRef = collection(db, "reminders");
 
-  const navigate = useNavigate();
+  const currentProjectIdParams = params.projectId;
 
   const handleTransfer = () => {
-    navigate("/createReminderForm");
+    navigate(`/createReminderForm/${currentProjectIdParams}`);
   };
 
   useEffect(() => {
@@ -35,11 +38,13 @@ export default function RemindersPage() {
     getReminders();
   }, [reminders]);
 
-  const locationStats = useLocation();
-  const currentProjectId = locationStats.state.projectId;
+  const filteredReminders = reminders.filter(
+    (reminder) => reminder.ProjectId === params.projectId
+  );
+
   return (
     <>
-      <NavBar projectId={currentProjectId} />
+      <NavBar />
       <div className="reminder-page">
         <div className="reminder-page-header-bar">
           <div className="reminder-page-filter-outter">
@@ -56,10 +61,12 @@ export default function RemindersPage() {
         </div>
         <div className="reminders-page-main-content-holder">
           <div className="reminders-page-reminder-items-holder">
-            {reminders.length === 0 ? (
-              <h2 className="font-heading" >There is nothing to show, try adding a reminder</h2>
+            {filteredReminders.length === 0 ? (
+              <h2 className="font-heading">
+                There is nothing to show, try adding a reminder
+              </h2>
             ) : (
-              reminders.map((reminder) => (
+              filteredReminders.map((reminder) => (
                 <ReminderItem key={reminder.id} reminder={reminder} />
               ))
             )}
