@@ -41,6 +41,7 @@ export default function ProjectsPage() {
           {/*  <---- | Main section starts here | ---->   */}
 
           <div className="projects-page-main-content page-main-content">
+          <h2 className="projects-page-heading font-heading" >Hello, Anton!</h2>
             <div className="projects-page-top-bar">
               <FontAwesomeIcon
                 icon={faPlus}
@@ -48,8 +49,10 @@ export default function ProjectsPage() {
                 onClick={() => setToggleUpdate(true)}
               />
             </div>
+
             <div className="project-page-page-center">
-              <div className="projects-page-projects-items-holder">
+              <div className="projects-page-projects-items-holder"> 
+                <h4 className="projects-page-heading-small font-heading" >Your projects!</h4>
                 <CreateNewProjectCard
                   toggleUp={toggleUpdate}
                   stateUpdate={setToggleUpdate}

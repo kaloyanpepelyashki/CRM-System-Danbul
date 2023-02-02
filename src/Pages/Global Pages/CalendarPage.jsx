@@ -10,7 +10,7 @@ export default function CalendarPage() {
       <div className="calendar-page-content-wrapper page-content-wrapper">
         <RemindersBar />
         <div className="calendar-page-main-content">
-          <h2>This is the "Calendar" page of the application</h2>
+          <h2 className="font-heading calendar" >This is the "Calendar" page of the application</h2>
         </div>
       </div>
     </>

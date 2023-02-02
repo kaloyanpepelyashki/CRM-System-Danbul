@@ -783,6 +783,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
+  box-shadow: 2px 2px #048a81;
+  margin-bottom: 10px;
 }
 .commit-button {
   padding: 10px 30px;
@@ -930,7 +932,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
-
+.calendar{
+  margin-left: 30px;
+}
 .calendar-page-content-wrapper {
   height: 100%;
   width: 100%;
@@ -1006,6 +1010,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-items: center;
   justify-content: center;
   background-color: #ffff;
+  border-radius: 12px;
 }
 
 .create-reminder-form {
@@ -1109,7 +1114,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin-top: 100px;
 }
 .global-back-btn {
@@ -1118,6 +1123,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: grey;
   font-size: 20px;
   cursor: pointer;
+  margin-right: 100px;
 }
 .global-submit-btn {
   padding: 10px 30px;
@@ -1125,7 +1131,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 15px;
   cursor: pointer;
   margin-bottom: 20px;
-  margin-left: 100px;
   background-color: #048a81;
   color: #ffffff;
   font-size: 20px;
@@ -1144,6 +1149,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: #f5f5f5;
   border-radius: 12px;
   margin-bottom: 40px;
+}
+.project-item-outter:hover {
+  cursor: pointer;
 }
 .project-item-inner {
   width: 100%;
@@ -1178,7 +1186,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /***  <==== === ! | PROJECTS PAGE | ! === ====>  ***/
-
+.projects-page-heading{
+  text-align:center;
+  color: #ffff;
+  padding-top: 20px;
+}
+.projects-page-heading-small {
+  width: 75%;
+  align-self: center;
+  text-align: left;
+  font-size: 16pt;
+  color: #ffff;
+}
 .projects-page-content-wrapper {
   height: 100%;
   display: flex;
@@ -1217,7 +1236,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 58px 40px 10px 20px;
 }
 
+
 /* <--- --- | PROJECT PAGE CREATE NEW PROJECT CARD STYLING | --- ---> */
+
+
 .project-item-input {
   background-color: #f5f5f5;
   border: none;

@@ -15,6 +15,9 @@ import PopUpMessage from "../../Components/Small components/pop-upMessageCompone
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
+
 export default function CreateApplicantFormPage() {
   const navigate = useNavigate();
   const params = useParams();
@@ -98,14 +101,22 @@ export default function CreateApplicantFormPage() {
         draggable
         pauseOnHover
         theme="colored"
+
+        
       />
-      <div className="create-applicant-form-page-container">
+
+
+      
+    
+      <div className="create-applicant-form-page-container">      
         <div className="create-applicant-form-holder">
+    
           <form className="create-applicant-form">
             {/* //<--- -- Personal Data part -- --->  */}
 
             <div className="create-applicant-form-personal-data">
               <div className="applicant-form-personal-left-side">
+         
                 <h2 className="applicant-form-heading font-heading">
                   Personal data
                 </h2>
@@ -355,12 +366,12 @@ export default function CreateApplicantFormPage() {
               toggleUp={toggleUpUpdate}
             >
               <div className="popup-message-buttons-holder">
-                <button className="commit-button2" onClick={handleCommit}>
+                <button className="commit-button2 font-paragraph-bigger" onClick={handleCommit}>
                   Commit
                 </button>
                 <button
                   onClick={() => setToggleUpUpdate(false)}
-                  className="cancel-button2"
+                  className="cancel-button2 font-paragraph-bigger"
                 >
                   Cancel
                 </button>
