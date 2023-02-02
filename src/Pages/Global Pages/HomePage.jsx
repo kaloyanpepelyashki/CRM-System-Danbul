@@ -1,5 +1,17 @@
-//Importing the router elements and hooks
+import { useEffect, useState } from "react";
+
+//Importing the React router hooks
 import { useParams } from "react-router-dom";
+
+//Importing firebase and firebase methods
+import {
+  collection,
+  doc,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
+import { db } from "../../firebaseConfig";
 
 //Importing components
 import NavBar from "../../Components/Global Components/NavigationBar";
@@ -9,9 +21,27 @@ import StatCard from "../../Components/Small components/StatCardsHomePage";
 
 export default function HomePage() {
   const params = useParams();
-
   const currentProjectIdparams = params.projectId;
+  const collectionRef = collection(db, "applicants");
 
+  const [applicants, setApplicants] = useState([]);
+
+  useEffect(() => {
+    const q = query(collectionRef, orderBy("onBoardingDate"));
+    onSnapshot(q, (snapshot) => {
+      const applicantsRaw = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setApplicants(applicantsRaw);
+    });
+  }, []);
+
+  const applicantsFiltered = applicants.filter(
+    (applicant) => applicant.ProjectId == currentProjectIdparams
+  );
+  console.log(applicants);
+  console.log(applicantsFiltered);
   return (
     <>
       {/*  <---- |Page content starts here | ---->   */}
