@@ -531,12 +531,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-items: center;
   justify-content: center;
   background-color: #d8d8d8;
+  border: 5px solid #048a67;
+  border-radius: 15px;
 }
 .popup-message-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 30px;
+  background-color: #ffff;
+  border: 10px #048a67;
+  border-radius: 15px;
 }
 .popup-message-top-section {
   align-self: flex-end;
