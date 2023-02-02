@@ -99,7 +99,7 @@ export default function CreateReminderForm() {
         <div className="create-reminder-form-holder">
           <form className="create-reminder-form">
             <div className="create-reminder-form-first-part">
-            <h4 className="create-reminder-title">Create reminder</h4>
+            <h4 className="create-reminder-title font-heading">Create reminder</h4>
               <input
                 type="text"
                 className="create-reminder-first-part-input
@@ -125,11 +125,11 @@ export default function CreateReminderForm() {
             </div>
             <div className="create-reminder-form-second-part">
               <div className="create-reminder-date">
-                <h4 className="create-reminder-title">When:</h4>
+                <h4 className="create-reminder-title font-heading">When:</h4>
                 <input className="create-reminder-date-input" type="date" />
               </div>
               <div className="create-reminder-date">
-                <h4 className="create-reminder-title">At:</h4>
+                <h4 className="create-reminder-title font-heading">At:</h4>
                 <input
                   className="create-reminder-time-input"
                   type="time"
@@ -139,7 +139,7 @@ export default function CreateReminderForm() {
             </div>
 
             <div className="create-reminder-form-third-part">
-              <h4 className="create-reminder-title">Priority:</h4>
+              <h4 className="create-reminder-title font-heading">Priority:</h4>
               <div
                 className="create-reminder-priority-items-holder"
                 onClick={(event) => {
@@ -148,19 +148,19 @@ export default function CreateReminderForm() {
               >
                 <option></option>
                 <option
-                  className="priority-item priority-item-low"
+                  className="priority-item priority-item-low font-paragraph"
                   value="#30CA30"
                 >
                   Low
                 </option>
                 <option
-                  className=" priority-item priority-item-medium"
+                  className=" priority-item priority-item-medium font-paragraph"
                   value="#FFA500"
                 >
                   Medium
                 </option>
                 <option
-                  className="priority-item priority-item priority-item-high"
+                  className="priority-item priority-item priority-item-high font-paragraph"
                   value="#FF0000"
                 >
                   High
@@ -168,12 +168,12 @@ export default function CreateReminderForm() {
               </div>
               <div className="buttons-holder-component">
                 <button
-                  className="global-back-btn"
+                  className="global-back-btn font-heading"
                   onClick={() => navigate(-1)}
                 >
                   Back
                 </button>
-                <button className="global-submit-btn">Submit</button>
+                <button className="global-submit-btn font-heading">Submit</button>
               </div>
             </div>
           </form>

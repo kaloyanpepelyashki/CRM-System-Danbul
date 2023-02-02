@@ -666,7 +666,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #048a81
+  border: 1px solid #048a81;
+  box-shadow: 2px 2px #048a81;
 }
 
 .applicant-form-personal-right-side-empty {
@@ -698,6 +699,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #048a81;
+  box-shadow: 2px 2px #048a81;
 }
 .applicant-form-item-active {
   background-color: #048a81;
@@ -714,12 +716,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 5px;
   border: 1px solid #048a81;
   margin-bottom: 10px;
+  box-shadow: 2px 2px #048a81;
 }
 .add-english-hours {
   width: 15%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
+  box-shadow: 2px 2px #048a81;
 }
 .language-certif-data {
   width: 99%;
@@ -751,6 +755,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 5px;
   border: 1px solid #048a81;
   margin-bottom: 10px;
+  box-shadow: 2px 2px #048a81;
 }
 .applicant-form-final-data-math{
   width: 10%;
@@ -758,6 +763,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 5px;
   border: 1px solid #048a81;
   margin-bottom: 10px;
+  box-shadow: 2px 2px #048a81;
 }
 
 .GPA{
@@ -765,6 +771,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
+  box-shadow: 2px 2px #048a81;
 }
 .commit-button {
   padding: 10px 30px;
@@ -1007,6 +1014,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border: 1px solid #048a81;
   margin-bottom: 10px;
   font-size: 20px;
+  box-shadow: 2px 2px #048a81;
+
 }
 .create-reminder-top-input {
   border-radius: 12px 12px 0 0;
@@ -1038,6 +1047,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border: 1px solid #048a81;
   margin-bottom: 10px;
   font-size: 20px;
+  box-shadow: 2px 2px #048a81;
 }
 
 .create-reminder-time-input {

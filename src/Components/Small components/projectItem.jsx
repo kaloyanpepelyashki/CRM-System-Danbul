@@ -41,9 +41,9 @@ export default function ProjectItem({ project }) {
               icon={faPenToSquare}
             />
           </div>
-          <p className="project-item-year">{project.YearOfCreation}</p>
-          <p className="project-item-title">{project.title}</p>
-          <p className="project-item-description">{project.description}</p>
+          <p className="project-item-year font-heading">{project.YearOfCreation}</p>
+          <p className="project-item-title font-heading">{project.title}</p>
+          <p className="project-item-description font-paragraph-bigger">{project.description}</p>
         </NavLink>
       </div>
     </div>
