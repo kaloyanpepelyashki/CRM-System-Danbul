@@ -1,5 +1,5 @@
 //Importing the router elements and hooks
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 //Importing components
 import NavBar from "../../Components/Global Components/NavigationBar";
@@ -9,7 +9,6 @@ import StatCard from "../../Components/Small components/StatCardsHomePage";
 
 export default function HomePage() {
   const params = useParams();
-  const location = useLocation();
 
   const currentProjectIdparams = params.projectId;
 

@@ -1,14 +1,8 @@
 //Importing React hooks
-import { useEffect, useNavigate, useState } from "react";
+import { useEffect, useState } from "react";
 
 //Importing firebase and firebase methods
-import {
-  collection,
-  getDocs,
-  onSnapshot,
-  orderBy,
-  query,
-} from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
 //Importing Font Awesome component and icons
@@ -34,7 +28,6 @@ export default function ProjectsPage() {
         ...doc.data(),
       }));
       setProjects(projectsI);
-      console.log(projectsI);
     });
   }, []);
 

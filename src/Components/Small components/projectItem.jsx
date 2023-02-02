@@ -1,5 +1,5 @@
 //Importing React router hooks
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //Importing firebase and firebase methods
 import { deleteDoc, doc } from "firebase/firestore";
@@ -17,7 +17,7 @@ export default function ProjectItem({ project }) {
   };
   const projectId = project.projectId;
 
-  const handleTransfer = (id) => {
+  const handleTransfer = () => {
     navigate(`/Dashboard/${projectId}`);
   };
   return (

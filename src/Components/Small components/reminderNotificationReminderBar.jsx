@@ -13,7 +13,9 @@ export default function ReminderNotification({ reminder }) {
           <div
             className="reminder-item-checkbox-holder"
             onChange={() => {
-              deleteReminder(reminder.id);
+              setTimeout(() => {
+                deleteReminder(reminder.id);
+              }, 500);
             }}
           >
             <input className="reminder-item-checkbox" type="radio" />

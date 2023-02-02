@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 //Importing React router dom essentials
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 //Importing firebase and firebase methods
 import { collection, addDoc } from "@firebase/firestore";
@@ -14,6 +14,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function CreateReminderForm() {
   const navigate = useNavigate();
+  const params = useParams();
+
+  const currentProjectIdParams = params.projectId;
 
   const day = new Date();
   const currentTime = day.getHours() + ":" + day.getMinutes();
@@ -29,20 +32,15 @@ export default function CreateReminderForm() {
   const handleClick = async (e) => {
     e.preventDefault();
 
-    //#################
-
-    //TO DO:
-    //TO BE FIXED, NEEDS TO THROW A TOAS MESSAGE WHEN SENDS THE FUNCTION
-
-    //#################
-
     const sendData = async () => {
+      //Uploading the data in the database (using a firebas addDoc method)
       await addDoc(collectionRef, {
         title: title,
         description: description,
+        ProjectId: params.projectId,
         priority: priority,
       });
-      toast.success("Does it workkkkkk", {
+      toast.success("Your Reminder is being handled", {
         position: "top-center",
         autoClose: 4000,
         hideProgressBar: false,

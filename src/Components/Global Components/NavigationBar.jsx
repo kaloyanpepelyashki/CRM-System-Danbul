@@ -1,6 +1,6 @@
 import { NavLink, useParams } from "react-router-dom";
 
-export default function NavBar(props) {
+export default function NavBar() {
   const params = useParams();
   const currentProjectIdParams = params.projectId;
   return (
@@ -39,7 +39,7 @@ export default function NavBar(props) {
               Reminders
             </NavLink>
             <NavLink
-              className="global-navba-link-item font-heading"
+              className="global-navba-link-item global-navba-last-link font-heading"
               to="/projects"
             >
               Projects

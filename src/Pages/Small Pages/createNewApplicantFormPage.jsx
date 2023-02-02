@@ -11,6 +11,10 @@ import { db } from "../../firebaseConfig";
 //Importing components
 import PopUpMessage from "../../Components/Small components/pop-upMessageComponent";
 
+//Importing toast components from react Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function CreateApplicantFormPage() {
   const navigate = useNavigate();
   const params = useParams();
@@ -29,7 +33,7 @@ export default function CreateApplicantFormPage() {
 
   const handleCommit = async (e) => {
     e.preventDefault();
-    try {
+    const sendData = async () => {
       //Uploading the data in the database (using a firebas addDoc method)
       await addDoc(collectionRef, {
         name: name,
@@ -42,9 +46,26 @@ export default function CreateApplicantFormPage() {
         EnglishCertificate: englishCertificate,
         PredictedGPA: predGPA,
         ProjectId: params.projectId,
-
-        //Closing the Pop-up message.
-      }).then(() => setToggleUpUpdate(false));
+      }).then(() => {
+        setToggleUpUpdate(false);
+        toast.success("The data is being processed", {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        setTimeout(() => {
+          navigate(-1);
+        }, 3000);
+      });
+    };
+    try {
+      sendData();
+      //Closing the Pop-up message.
     } catch (err) {
       console.error("The data sending was impossible due to:", err);
     }
@@ -60,14 +81,24 @@ export default function CreateApplicantFormPage() {
   const setCertificateColor = (index) => {
     setChoiceENGCert(index);
   };
-  const goBack = () => {
-    navigate(-1);
-  };
   //Triggering the pop-up message
   const [toggleUpUpdate, setToggleUpUpdate] = useState(false);
 
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        limit={1}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <div className="create-applicant-form-page-container">
         <div className="create-applicant-form-holder">
           <form className="create-applicant-form">
@@ -260,13 +291,12 @@ export default function CreateApplicantFormPage() {
                 </option>
               </div>
             </div>
-
+            <h2 className="applicant-form-heading applicant-form-final-heading font-heading ">
+              Final details
+            </h2>
             {/* Final details data part */}
-
             <div className="final-details-data">
-              <h2 className="applicant-form-heading font-heading">
-                Final details
-              </h2>
+              {/* //<=== Second container// */}
               <div className="applicant-form-final-data-left-side">
                 <select className="applicant-form-select font-paragraph font-paragraph">
                   <option value="DA">Dania Academy</option>
@@ -286,7 +316,7 @@ export default function CreateApplicantFormPage() {
                   placeholder="Math B..."
                 />
               </div>
-
+              {/* //<=== Second container// */}
               <div className="applicant-form-final-data-right-side">
                 <div className="applicant-form-final-data-right-side-empty"></div>
                 <input

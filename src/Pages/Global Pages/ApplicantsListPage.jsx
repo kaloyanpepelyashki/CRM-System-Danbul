@@ -1,5 +1,5 @@
 //Importing React router hooks
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 //Importin React hooks
 import { useState, useEffect } from "react";
@@ -10,7 +10,6 @@ import { db } from "../../firebaseConfig";
 
 //Importing components
 import RemindersBar from "../../Components/Global Components/RemindersBar";
-import ApplicantProfile from "../../Components/Small components/applicantProfileItemApplicantsListPage";
 import ApplicantListPageMainContent from "../../Components/Small components/applicantsListPageMainContent";
 import NavBar from "../../Components/Global Components/NavigationBar";
 

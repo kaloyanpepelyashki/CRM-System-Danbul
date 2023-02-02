@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 //importing React hooks
-import { useEffect, useNavigate, useState } from "react";
+import { useState } from "react";
 
 //Importing firebase and firebase methids
 import { collection, addDoc } from "firebase/firestore";
@@ -33,7 +33,7 @@ export default function CreateNewProjectCard(props) {
       const randomNumberSelect = () => {
         const randomDigits = [
           334553, 985325, 536638, 303204, 643204, 342354, 123862, 575700,
-          923134, 99988, 214336,
+          923134, 99988, 214336, 121212, 812735, 336421,
         ];
         let randomNumber = Math.floor(Math.random() * randomDigits.length);
         return randomDigits[randomNumber];
