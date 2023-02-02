@@ -56,7 +56,7 @@ export default function HomePage() {
           <div className="home-page-main-content page-main-content">
             <div className="home-page-stat-cards-holder">
               <div className="home-page-stat-card-top-holder">
-                <StatCard Color={"#01575C"} />
+                <StatCard Color={"#01575C"} textColor="white" />
               </div>
               <div className="home-page-stat-cards-bottom-holder">
                 <StatCard Color={"#59BA89"} />

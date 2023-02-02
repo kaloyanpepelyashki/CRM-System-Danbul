@@ -1,8 +1,8 @@
-export default function StatCard({ Color }) {
+export default function StatCard({ Color, textColor }) {
   return (
     <>
       <div className="stat-card-outter" style={{ backgroundColor: Color }}>
-        <div className="stat-card-inner">
+        <div className="stat-card-inner" >
 
           <div className="stat-card-arrow-shape">
             <div className="stat-card-arrow-shape-inner-container">
@@ -10,7 +10,7 @@ export default function StatCard({ Color }) {
               <p className="stat-card-title stat-card-text-piece font-paragraph">Applicants</p>
             </div>
           </div>
-          <p className="stat-card-text font-paragraph">Number of applicants for MMD</p>
+          <p className="stat-card-text font-paragraph" style={{color: textColor}}>Number of applicants for MMD</p>
         </div>
       </div>
     </>

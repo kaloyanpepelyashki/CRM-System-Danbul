@@ -16,11 +16,17 @@ export default function ApplicantInProfilePage() {
     <>
       <div className="in-applicant-profile-page">
         <div className="in-applicant-profile-page-main-content-wrapper">
+      
           <RemindersBar />
           <div className="in-applicants-all-content-holder">
             <div className="in-applicants-page-inner-conntent">
               {/* <== Notes component ==>  */}
-
+  <button
+                className="in-applicants-profile-page-back-button font-paragraph"
+                onClick={goBack}
+              >
+                Back
+              </button>
               <div className="in-applicants-page-notes-component">
                 <div className="in-applicants-profile-page-notes-color"></div>
                 <div className="in-applicants-profile-page-notes-items-holder">
@@ -48,6 +54,7 @@ export default function ApplicantInProfilePage() {
                   className="in-applicants-profile-pic"
                 />
               </div>
+              <h2>{location.state?.name}</h2>
               <div className="in-applicants-profile-page-information-holder-holder">
                 <div className="in-applicants-profile-page-information-holder">
                   <p className="in-applicants-profile-page-information font-paragraph">
@@ -150,12 +157,7 @@ export default function ApplicantInProfilePage() {
                   </p>
                 </div>
               </div>
-              <button
-                className="in-applicants-profile-page-back-button font-paragraph"
-                onClick={goBack}
-              >
-                Back
-              </button>
+
             </div>
           </div>
         </div>
