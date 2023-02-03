@@ -27,12 +27,14 @@ export default function ReminderItem({ reminder }) {
             <div className="reminder-item-main-content-top-part">
               <div
                 className="reminder-item-priority-indicator"
-                // style={{ backgroundColor: reminder.priority }}
+                style={{ backgroundColor: reminder.priority }}
               ></div>
-              <h4 className="reminder-item-title">Title</h4>
+              <h4 className="reminder-item-title">{reminder.title}</h4>
             </div>
             <div className="reminder-item-main-content-bottom-bar">
-              <p className="reminder-item-description">Description</p>
+              <p className="reminder-item-description">
+                {reminder.description}
+              </p>
             </div>
           </div>
           <FontAwesomeIcon

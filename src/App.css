@@ -116,6 +116,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
 }
 
 /* <--- --- | REMINDER NOTIFICATION COMPONENT STYLING | --- ---> */
@@ -166,7 +167,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* <--- --- | REMINDER ITEM COMPONENT STYLING | --- ---> */
 
 .reminder-item-outter {
-  width: 67%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,11 +214,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .reminder-item-title {
-  font-size: 21pt;
+  font-size: 19pt;
 }
 
 .reminder-item-description {
-  width: 70%;
+  width: 130%;
   font-size: 17pt;
 }
 .reminder-item-update-icon {
@@ -681,7 +682,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #048a81;
-  box-shadow: 2px 2px #048a81;;
+  box-shadow: 2px 2px #048a81;
 }
 
 .applicant-form-personal-right-side-empty {
@@ -937,7 +938,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
-.calendar{
+.calendar {
   margin-left: 30px;
 }
 .calendar-page-content-wrapper {
@@ -977,7 +978,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .reminders-page-reminder-items-holder {
   width: 60%;
-  height: 50%;
+  height: 75%;
+  overflow-y: scroll;
+  padding: 30px, 15px, 20px, 15px;
+  margin-top: -30px;
 }
 .reminder-page-filter-outter {
   width: 56px;
@@ -1036,7 +1040,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-bottom: 10px;
   font-size: 20px;
   box-shadow: 2px 2px #048a81;
-
 }
 .create-reminder-top-input {
   border-radius: 12px 12px 0 0;
@@ -1191,8 +1194,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 /***  <==== === ! | PROJECTS PAGE | ! === ====>  ***/
-.projects-page-heading{
-  text-align:center;
+.projects-page-heading {
+  text-align: center;
   color: #ffff;
   padding-top: 20px;
 }
@@ -1241,9 +1244,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 58px 40px 10px 20px;
 }
 
-
 /* <--- --- | PROJECT PAGE CREATE NEW PROJECT CARD STYLING | --- ---> */
-
 
 .project-item-input {
   background-color: #f5f5f5;
