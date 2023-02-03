@@ -935,6 +935,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: grey;
   font-size: 20px;
   cursor: pointer;
+  align-self: flex-start;
+  padding: 20px;
 }
 
 /***  <==== === ! | CALENDAR PAGE | ! === ====>  ***/
